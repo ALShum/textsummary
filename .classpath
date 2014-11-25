@@ -10,5 +10,8 @@
 	<classpathentry kind="lib" path="ejml-v0.26-libs/EJML-equation-0.26-sources.jar"/>
 	<classpathentry kind="lib" path="ejml-v0.26-libs/EJML-equation-0.26.jar"/>
 	<classpathentry kind="lib" path="commons-io-2.4/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="src/en-sent.bin"/>
+	<classpathentry kind="lib" path="src/en-pos-maxent.bin"/>
+	<classpathentry kind="lib" path="src/en-token.bin"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
