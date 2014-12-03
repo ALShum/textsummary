@@ -24,7 +24,12 @@ public class PageRanker implements IRanker {
 		}
 		
 		int[] ranks = new int[commonalityMatrix.length];
-		
+		ArrayList<double> sortedResults = new ArrayList<double>(result);
+		Collections.sort(sortedResults);
+
+		for(int i = 0; i < ranks.length; i++) {
+			ranks[i] = sortedResults.indexOf(result[i]);
+		}
 		
 		return ranks;
 	}
