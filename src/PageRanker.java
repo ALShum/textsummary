@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Collections;
 
 //http://ejml.org/javadoc/ for potential matrix math
 /**
@@ -31,7 +32,6 @@ public class PageRanker implements IRanker {
 		for(int i = 0; i < ranks.length; i++) {
 			ranks[i] = Arrays.binarySearch(sortedResults, result[i]);
 		}
-		
 		return ranks;
 	}
 	

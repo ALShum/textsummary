@@ -48,7 +48,9 @@ public class SummaryBot {
 		ArrayList<AbstractList<String>> strippedSentences= new ArrayList<AbstractList<String>>();
 		Iterator<String> iter = sentences.iterator();
 		while(iter.hasNext()) {
-			strippedSentences.add(_sentProc.TokenizeAndStripSentence(iter.next()));
+			AbstractList<String> s =_sentProc.TokenizeAndStripSentence(iter.next());
+			strippedSentences.add(s);
+			
 		}
 		double[][] commonMatrix = MiscUtils.CreateCommonMatrix(strippedSentences);
 		int[] bestSentenceIndex= _ranker.RankItems(commonMatrix);

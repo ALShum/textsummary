@@ -26,8 +26,8 @@ public class MiscUtils {
 					for(int j : words.get(word)) {
 						result[i][j]++;
 						result[j][i]++;
-						words.get(word).add(i);
 					}
+					words.get(word).add(i);
 				} else {
 					ArrayList<Integer> n = new ArrayList<Integer>();
 					n.add(i);
@@ -35,6 +35,11 @@ public class MiscUtils {
 				}
 			}
 			result[i][i]=0; //Or whatever we want to set how similar a sentence is to itself
+		}
+		for(int i=0;i<sentences.size();i++) {
+			for(int j=0;j<sentences.size();j++) {
+				result[i][j] = result[i][j]/(Math.log(sentences.get(i).size())+Math.log(sentences.get(j).size()));
+			}
 		}
 		return result;
 	}

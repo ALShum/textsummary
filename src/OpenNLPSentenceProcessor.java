@@ -67,7 +67,7 @@ public class OpenNLPSentenceProcessor implements ISentenceProcessor {
 		String[] sent = tokenizer.tokenize(sentence);
 		String[] tag =tagger.tag(sent);
 		for(int i=0; i<sent.length;i++) {
-			if(tags.containsKey(tag[i]) && tags.get(tag[i])) list.add(sent[i]);
+			if(tags.containsKey(tag[i]) && tags.get(tag[i]) && !list.contains(sent[i])) list.add(sent[i]);
 		}
 		return list;
 	}
