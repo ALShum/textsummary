@@ -12,10 +12,10 @@ public class testMain {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		OpenNLPSentenceProcessor nlpProc = new OpenNLPSentenceProcessor();
+		LuceneSentenceProcessor lProc = new LuceneSentenceProcessor();
 		//nlpProc.SetRelevantTokenTags(new String[]{"CD", "FW", "JJ", "JJR", "JJS", "LS", "MD", "NN", "NNP", "NNPS", "NNS", "PDT", "PRP$", "RB", "RBR", "RBS", "RP", "SYM", "VB", "VBD", "VBG", "VBN", "VBP", "VBZ"});
 		PageRanker pageRanker = new PageRanker();
-		SummaryBot summaryBot = new SummaryBot(nlpProc, pageRanker);
+		SummaryBot summaryBot = new SummaryBot(lProc, pageRanker);
 		File testFile = new File("testArticle.txt");
 		//AbstractList<String> sent=nlpProc.SeparateSentences(FileUtils.readFileToString(testFile, "utf-8"));
 		//for(String s : sent) {
@@ -27,7 +27,7 @@ public class testMain {
 		//	System.out.println();
 		//	System.out.println();
 		//}
-		for(String s: summaryBot.SummarizeArticle(37, testFile)) {
+		for(String s: summaryBot.SummarizeArticle(5, testFile)) {
 			System.out.println(s);
 		}
 	}

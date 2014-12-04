@@ -13,5 +13,7 @@
 	<classpathentry kind="lib" path="src/en-sent.bin"/>
 	<classpathentry kind="lib" path="src/en-pos-maxent.bin"/>
 	<classpathentry kind="lib" path="src/en-token.bin"/>
+	<classpathentry kind="lib" path="lucene/lucene-analyzers-common-4.10.2.jar"/>
+	<classpathentry kind="lib" path="lucene/lucene-core-4.10.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
