@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=0.70in]{geometry}
+\setlength{\parindent}{0in}
+\title{Unsupervised Method Summarizing News Articles}
+\author{Alex Shum, Robert }
+
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+Summarizing a news article is the process of reducing the original document text into a few brief overall key points.  A good summarization should be both concise and still retain all the important elements from the original text.  There are two main classes of methods for summarization: abstractive and extractive[1].  Abstractive summarization methods generate new text that will paraphrase the article.  These techniques seek to create summaries close to what a person might write to generalize an article.  By contrast, extractive techniques do not generate any text and will simply extract the most relevent sentences from the article.  Extractive methods can only return summaries containing text that was present in the original article.  The methods and results presented will be limited to extractive techniques.\\
+\\
+Among extractive techniques there are many approaches to rank sentences and phrases within an article.  Common extractive tasks include keyphrase detection and sentence extraction -- finding the most relevant keyword or sentence.  Our goal is to summarize the overall content of a news article and our focus will be implementing an extractive method to find the most relevant sentences to summarize a news article.  The method implemented in this project is TextRank; TextRank is an unsupervised method similar to the PageRank algorithm for webpages.  Included below is a brief overview of extractive methods, an explanation of the TextRank algorithm, implementation issues and our results and conclusion.
+
+\section*{Background}
+One of the first uses for automatic summarization was to automate finding keywords or keyphrases for journal papers.  An early solution to this problem was a supervised technique; keyphrases were assigned by readers for various collections of documents and a decision tree algorithm was used to classify text as a keyphrase or not [3].  This supervised method would look at the length of the text, frequency, if the text contains nouns or verbs and a few other features to train a model to predict if a string of text is a keyphrase or not.  A decision tree method is able to determine which features are important for keyphrases but unfortunately the supervised nature of this method requires both training data and intelligent feature selection.\\
+\\
+Another possible approach to automatic summarization is to use latent semantic analysis [4].  The document can be represented as an $m \times n$ matrix with sentences representing the $m$ unique word and $n$ sentences in the document.  The columns of this matrix represent the sentences in the document.  Distance between sentences are given by the cosine distance: $d(\vec{s_1}, \vec{s_2}) = \frac{\vec{s_1} \cdot \vec{s_2}}{|\vec{s_1}||\vec{s_2}|}$.  The most relevant sentences should be have the shortest average distance to other sentences.  Alternatively, its possible rank based on the sentence with the highest singular value from the singular value decomposition.\\
+\\
+More recently a few graph based methods based on the PageRank algorithm have been proposed for this problem.  The PageRank algorithm represents webpages as vertices in a graph with edges representing links between pages.  PageRank ranks webpages based on the link structure; important webpages are linked to by other important webpages [6].  This idea is extended to sentences in a document; important sentences are similar to other important sentences.  TextRank and LexRank are two algorithms that rank sentences based on this idea [2][5].  These two algorithms represent sentences in a document as vertices and edges based on a distance metric between sentences.  We give a more detailed description of the TextRank algorithm in the next section.
+
+\section*{Method}
+
+
+\section*{Implementation}
+
+
+\section*{Results}
+
+
+\section*{Conclusion}
+
+%citation
+%overview
+%1. http://pages.cs.wisc.edu/~goldberg/publications/summarization.pdf
+%textrank
+%2. http://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf
+%supervised
+%3. http://www.extractor.com/IR2000.pdf
+%LSA
+%4. http://www.kiv.zcu.cz/~jstein/publikace/isim2004.pdf
+%lexrank
+%5. http://www.cs.cmu.edu/afs/cs/project/jair/pub/volume22/erkan04a-html/erkan04a.html
+%pagerank
+%6. http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf
+%7. Lucene
+%8. OpenNLP
+
+\end{document}
