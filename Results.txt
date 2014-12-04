@@ -1,0 +1,254 @@
+Compared Our summarizer to 3 others found online:
+1: ours
+2: http://freesummarizer.com/
+3: http://autosummarizer.com/
+4: http://textcompactor.com/
+
+on 5 different news articles that are summarized to 5 sentences:
+1: http://www.reuters.com/article/2014/12/04/us-vatican-economy-pell-idUSKCN0JI1CG20141204?feedType=RSS&feedName=worldNews
+2: http://thinkprogress.org/climate/2014/12/04/3599528/cruise-lines-sewage-2014/
+3: http://articles.economictimes.indiatimes.com/2014-12-02/news/56648982_1_syria-british-man-jihadis
+4: http://www.thelocal.de/20141204/merkel-speaks-out-against-net-neutrality
+5: http://www.bbc.com/news/world-europe-30322198
+
+
+Article 1
+
+1:
+Each department's financial statements will be reviewed by a major international auditing firm, the letter said.
+
+As of Jan. 1, each department will have to enact "sound and efficient financial management policies" and prepare financial information and reports that meet international accounting standards.
+
+It has closed many suspicious accounts at its scandal-rocked bank.
+
+Pell's office sent a letter to all Vatican departments last month about changes in economic ethics and accountability.
+
+Pell is an outsider from the English-speaking world transferred by Pope Francis from Sydney to Rome to oversee the Vatican's often muddled finances after decades of control by Italians.
+
+
+2:
+The Vatican's economy minister has said hundreds of millions of euros were found "tucked away" in accounts of various Holy See departments without having appeared in the city-state's balance sheets.
+
+Pell's office sent a letter to all Vatican departments last month about changes in economic ethics and accountability.
+
+1, each department will have to enact "sound and efficient financial management policies" and prepare financial information and reports that meet international accounting standards.
+
+
+3:
+The Vaticans economy minister has said hundreds of millions of euros were found tucked away in accounts of various Holy See departments without having appeared in the city-states balance sheets.
+
+Pell did not suggest any wrongdoing but said Vatican departments had long had an almost free hand with their finances and followed long-established patterns in managing their affairs.
+
+Pells office sent a letter to all Vatican departments last month about changes in economic ethics and accountability.
+
+As of Jan. 1, each department will have to enact sound and efficient financial management policies and prepare financial information and reports that meet international accounting standards.
+
+4:
+ the Holy See is paying its way, while possessing substantial assets and investments," Pell said, according to an advance text made available on Thursday.
+
+Pell did not suggest any wrongdoing but said Vatican departments had long had "an almost free hand" with their finances and followed "long-established patterns" in managing their affairs.
+
+"Very few were tempted to tell the outside world what was happening, except when they needed extra help," he said, singling out the once-powerful Secretariat of State as one department that had especially jealously guarded its independence.
+
+"It was impossible for anyone to know accurately what was going on overall," said Pell, head of the new Secretariat for the Economy that is independent of the now downgraded Secretariat of State.
+
+Pell is an outsider from the English-speaking world transferred by Pope Francis from Sydney to Rome to oversee the Vatican's often muddled finances after decades of control by Italians.
+
+
+Comparison:
+Our text summary was able to pick out 5 relevant sentences that were similar to what the others said. The only sentence I could find that would have been better to include in the summary was " The Vaticans economy minister has said hundreds of millions of euros were found tucked away in accounts of various Holy See departments without having appeared in the city-states balance sheets."
+
+Article 2:
+
+1.
+But new fuel standards will kick in next year for both the United States and Canada, which should reduce sulfur emissions from each ship by 97 percent, and cut the emissions of soot by 85 percent.
+
+That adds up to more than one billion gallons a year for the industry.
+
+Such antiquated treatment systems leave harmful levels of fecal matter, bacteria, heavy metals and other contaminants in the water, FOE noted.
+
+Federal law requires that cruise ships only dump treated wastewater if they are within three nautical miles of shore.
+
+But beyond that point, it's essentially a free-for-all.
+
+2.
+FOE also cites data from the Environmental Protection Agency (EPA) which shows "an average cruise ship with 3,000 passengers and crew produces about 21,000 gallons of sewage a day enough to fill 10 backyard swimming pools in a week.
+
+Up through 2013, the report card had graded the cruise lines on three metrics: the quality of their sewage treatment technology, how much they reduce their air pollution through the use of cleaner fuels and plugging into onshore power, and how well they comply with water quality standards especially those established by the State of Alaska to protect its coasts.
+
+But for the 2014 report, all 16 cruise lines apparently refused to respond to FOE's request for information on their pollution reduction efforts forcing the group to rely on federal data.
+
+Outside of the transparency issue, Disney Cruise Lines is apparently the most environmentally friendly, scoring an A for sewage treatment, a B- for air pollution reduction, and an A for water quality compliance.
+
+3.
+FOE also cites data from the Environmental Protection Agency which shows an average cruise ship with 3,000 passengers and crew produces about 21,000 gallons of sewage a day enough to fill 10 backyard swimming pools in a week.
+
+Were encouraged that some cruise lines are taking incremental steps to improve their performance, but the entire industry must stop hiding behind weak regulations and take action to make sure the oceans their ships travel remain as clear as the photos in cruise brochures.
+
+The centerpiece of FOEs analysis was their Cruise Ship Report Card, which has come out every year since 2009.
+
+Up through 2013, the report card had graded the cruise lines on three metrics: the quality of their sewage treatment technology, how much they reduce their air pollution through the use of cleaner fuels and plugging into onshore power, and how well they comply with water quality standards especially those established by the State of Alaska to protect its coasts.
+
+Outside of the transparency issue, Disney Cruise Lines is apparently the most environmentally friendly, scoring an A for sewage treatment, a B- for air pollution reduction, and an A for water quality compliance.
+
+4.
+
+Cruise ships released over one billion gallons of sewage into the ocean in 2014, according to a new report from Friends of the Earth.
+
+The analysis, which worked off of federal data, did show that some of the 16 cruise lines assessed are slowly becoming more environmentally friendly.
+
+“We’re encouraged that some cruise lines are taking incremental steps to improve their performance, but the entire industry must stop hiding behind weak regulations and take action to make sure the oceans their ships travel remain as clear as the photos in cruise brochures.”
+
+The centerpiece of FOE’s analysis was their Cruise Ship Report Card, which has come out every year since 2009.
+
+Up through 2013, the report card had graded the cruise lines on three metrics: the quality of their sewage treatment technology, how much they reduce their air pollution through the use of cleaner fuels and plugging into onshore power, and how well they comply with water quality standards — especially those established by the State of Alaska to protect its coasts.
+
+
+Comparison: In our summarizer, the 2nd and 5th sentences were not relevant, but the rest pulled important oints from the article. Summarizer 3 did a particularly poor job of summarizing. Focus on specific points that don't contribute to the larger article.
+
+Article 3:
+
+1.
+It came days after a court heard how a British man was jailed for conspiring to attend a terror training camp in Syria after he returned home after whining to his girlfriend about his treatment abroad.
+
+Radicalised foreigners have been drawn to IS, which has conducted a series of mass executions and other atrocities since launching its offensive in Iraq and Syria in June, the report said.
+
+Tanvir Sheikh, father of one of Majeed's friends who was still missing in Iraq, said he felt betrayed by his son.
+
+A third fighter said he was "sick" of his time with the militant group, adding: "They make me do the washing up."
+
+Sheikh said his son Fahad had a job offer in Kuwait but instead he decided to travel to Iraq to join the extremists.
+
+2.
+Jihadis, who travelled to Iraq and Syria to join the Islamic State (IS) are begging to be allowed to return home, complaining they were forced to do menial tasks, media reported Tuesday.
+
+Foreign recruits have been writing to their parents with feeble excuses that range from having to clean toilets and to their iPod was no longer working or that it was getting too cold, the media reported.
+
+A series of weepy messages leaked to the French daily Le Figaro revealed a number of young French Muslim converts are having second thoughts about signing up to IS.
+
+"I'm fed up to the back teeth. My iPod no longer works out here. I have got to come home," one of the foreign IS recruits was quoted as saying.
+
+3.
+Jihadis, who travelled to Iraq and Syria to join the Islamic State are begging to be allowed to return home, complaining they were forced to do menial tasks, media reported Tuesday.
+
+Dozens of other recruits, who are reportedly now working with French lawyers, have collected texts and messages that suggest the jihadis felt cheated into joining IS.
+
+One lawyer said that the longer they remain in Iraq and Syria, the more chance they have of becoming time bombs when they return.
+
+The report also mentioned the Indian national, Majeed, who went to syria to fight for the militant group and was later arrested by the National Investigation Agency for terror-related offences when he arrived back home.
+
+The brothers brought back bullets and took the pictures on their mobile phones to remember their time in the jihadi camp.
+
+4.
+
+ One lawyer said that the longer they remain in Iraq and Syria, the more chance they have of becoming "time bombs" when they return.
+
+The report also mentioned the Indian national, Majeed, who went to syria to fight for the militant group and was later arrested by the National Investigation Agency (NIA) for terror-related offences when he arrived back home.
+
+Majeed told NIA officers he was sidelined by the jihadis for whom he fetched water and performed other lowly tasks such as cleaning toilets, instead of taking part in the deadly offensive like he wanted.
+
+Al Qaeda announced in September a new chapter of its extremist movement charged with waging jihad in South Asia.
+
+Tanvir Sheikh, father of one of Majeed's friends who was still missing in Iraq, said he felt betrayed by his son.
+
+Comparison:
+Our summarizer did about as well as number 2, giving a good feeling of what the article was reporting. The 3 summarizer article has a couple irrelevant sentences, while the last one does a poor job overall.
+
+
+Article 4:
+
+1
+"If Merkel goes into negotiations with the position she's outlined today, it will be very difficult for the European Council to find a common position," she said.
+
+Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
+
+Social Democratic Party (SPD) MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
+
+The Council, composed of the heads of state and government of all the EU member countries, must find a common negotiating position to deal with the European Parliament, which voted against a European Commission plan for regulations that would allow a two-tier internet in April.
+
+This is not the net neutrality we want, but a move towards the creation of a two-tier network where content becomes preferred based on who pays for it to make it so," said Markus Beckedahl, Berlin-based founder of netzpolitik.
+
+2.
+Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
+
+At the Vodafone-hosted Digitising Europe conference in Berlin, she called for a splitting of services, "one for free internet, and the other for special services", adding that it was up to Brussels to negotiate how it would work.
+
+Merkel added that these special services would run over existing internet infrastructure.
+
+Social Democratic Party (SPD) MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
+
+"If Merkel goes into negotiations with the position she's outlined today, it will be very difficult for the European Council to find a common position," she said.
+
+3.
+At the Vodafone-hosted Digitising Europe conference in Berlin, she called for a splitting of services, one for free internet, and the other for special services , adding that it was up to Brussels to negotiate how it would work.
+
+Social Democratic Party MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
+
+If Merkel goes into negotiations with the position shes outlined today, it will be very difficult for the European Council to find a common position, she said.
+
+The Council, composed of the heads of state and government of all the EU member countries, must find a common negotiating position to deal with the European Parliament, which voted against a European Commission plan for regulations that would allow a two-tier internet in April.
+
+If you poke holes into net neutrality the way Chancellor Merkel suggests, then its no longer democratic, he said.
+
+4.
+ Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
+
+At the Vodafone-hosted Digitising Europe conference in Berlin, she called for a splitting of services, "one for free internet, and the other for special services", adding that it was up to Brussels to negotiate how it would work.
+
+"An innovation-friendly internet means that there is a guaranteed reliability for special services," she said. "These can only develop when predictable quality standards are available".
+
+Merkel added that these special services would run over existing internet infrastructure.
+
+Social Democratic Party (SPD) MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
+
+Comparison: All summarizers was very similarin this article. They summarized it well.
+
+Article 5:
+
+1.
+Mr Putin said: "There is no doubt they would have loved to see the Yugoslavia scenario of collapse and dismemberment for us - with all the tragic consequences it would have for the peoples of Russia.
+
+So it's telling that Mr Putin chose to stress his unwavering hard line on the crisis in Ukraine: what happened in Kiev was an "illegal coup" and Crimea, which Russia annexed, is like "holy land" for Russia and will always be treated that way.
+
+He insisted the "tragedy" in Ukraine's south-east had proved that Russian policy had been right but said Russia would respect its neighbour as a brotherly country.
+
+It is not our design or desire that we see a Russia isolated through its own actions," Mr Kerry said.
+
+Stressing that Russia remained "open for the world", Mr Putin suggested Western sanctions should be seen as a stimulus.
+
+
+2.
+Russia has been hit hard by falling oil prices and by Western sanctions imposed in response to its interventions in the crisis in neighbouring Ukraine.
+
+Speaking to both chambers in the Kremlin, Mr Putin also accused Western governments of seeking to raise a new "iron curtain" around Russia.
+
+So it's telling that Mr Putin chose to stress his unwavering hard line on the crisis in Ukraine: what happened in Kiev was an "illegal coup" and Crimea, which Russia annexed, is like "holy land" for Russia and will always be treated that way.
+
+Vladimir Putin again accused the West of meddling in Russia's internal affairs and using sanctions to "contain" the country as it grew stronger and more independent.
+
+Russians are believed to have taken more than $100bn ( 64bn; 81bn) out of the country this year and Mr Putin promised an amnesty for anyone choosing to bring their money back.
+
+3.
+He insisted the tragedy in Ukraines south-east had proved that Russian policy had been right but said Russia would respect its neighbour as a brotherly country.
+
+So its telling that Mr Putin chose to stress his unwavering hard line on the crisis in Ukraine: what happened in Kiev was an illegal coup and Crimea, which Russia annexed, is like holy land for Russia and will always be treated that way.
+
+Vladimir Putin again accused the West of meddling in Russias internal affairs and using sanctions to contain the country as it grew stronger and more independent.
+
+Russians are believed to have taken more than $100bn out of the country this year and Mr Putin promised an amnesty for anyone choosing to bring their money back.
+
+Stressing that Russia remained open for the world , Mr Putin suggested Western sanctions should be seen as a stimulus.
+
+4.
+Russia has been hit hard by falling oil prices and by Western sanctions imposed in response to its interventions in the crisis in neighbouring Ukraine.
+
+The rouble, once a symbol of stability under Mr Putin, suffered its biggest one-day decline since 1998 on Monday.
+
+The government has warned that Russia will fall into recession next year.
+
+Speaking to both chambers in the Kremlin, Mr Putin also accused Western governments of seeking to raise a new "iron curtain" around Russia.
+
+He expressed no regrets for annexing Ukraine's Crimea peninsula, saying the territory had a "sacred meaning" for Russia.
+
+
+Comparison:

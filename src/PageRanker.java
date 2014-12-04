@@ -24,20 +24,24 @@ public class PageRanker implements IRanker {
 		}
 		
 		//indices: each sentences rank
-		int[] indices = new int[commonalityMatrix.length];
-		double[] sortedResults = Arrays.copyOf(result, result.length);
+		Pair[] sortedResults = new Pair[result.length];
+		for(int i=0; i<result.length;i++) {
+			sortedResults[i] = new Pair(i, result[i]);
+		}
 		Arrays.sort(sortedResults);
 		
 		//rank: index of the smallest page-rank to the largest
-		int[] ranks = new int[indices.length];
-		for(int i = 0; i < indices.length; i++) {
-			indices[i] = Arrays.binarySearch(sortedResults, result[i]);
-			ranks[indices[i]] = i;
+		int[] ranks = new int[result.length];
+		for(int i = 0; i < sortedResults.length; i++) {
+			//System.out.println(sortedResults[i].index + "," + i);
+			ranks[i] = sortedResults[i].index;
+			
 		}
+		
+		//System.out.println(Arrays.toString(commonalityMatrix[0])+"\n");
 		
 		//System.out.println(Arrays.toString(sortedResults));
 		//System.out.println(Arrays.toString(result));
-		//System.out.println(Arrays.toString(indices));
 		//System.out.println(Arrays.toString(ranks));
 		
 		return(ranks);
@@ -92,7 +96,8 @@ public class PageRanker implements IRanker {
 		//normalize
 		for(int i = 0; i < mtx.length; i++) {
 			for(int j = 0; j < mtx.length; j++) {
-				mtx[i][j] = mtx[i][j]/colSum[j];
+				double div = colSum[j] == 0.0 ? 1 : colSum[j];
+				mtx[i][j] = mtx[i][j]/div;
 			}
 		}
 		
@@ -113,5 +118,24 @@ public class PageRanker implements IRanker {
 		}
 		
 		return(vec);
+	}
+	
+	private class Pair implements Comparable{
+		public double val;
+		public int index;
+		
+		public Pair(int i, double v) {
+			val=v;
+			index=i;
+		}
+		
+		@Override
+		public int compareTo(Object arg0) {
+			Pair p= (Pair)arg0;
+			if(p.val==val) return 0;
+			if(p.val>val) return 1;
+			else return -1;
+		}
+		
 	}
 }

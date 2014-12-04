@@ -56,7 +56,7 @@ public class SummaryBot {
 		int[] bestSentenceIndex= _ranker.RankItems(commonMatrix);
 		String[] bestSentences= new String[Math.min(bestSentenceIndex.length, numberOfSummarySentences)];
 		for(int i=0;i<bestSentences.length;i++) {
-			bestSentences[i]=sentences.get(bestSentenceIndex[bestSentences.length-i-1]);
+			bestSentences[i]=sentences.get(bestSentenceIndex[i]);
 		}
 		return bestSentences;
 	}
