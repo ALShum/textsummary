@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Collections;
 
 //http://ejml.org/javadoc/ for potential matrix math
 /**
@@ -24,15 +23,24 @@ public class PageRanker implements IRanker {
 			result = scalar_add(1 - damping_factor, result);
 		}
 		
-		int[] ranks = new int[commonalityMatrix.length];
+		//indices: each sentences rank
+		int[] indices = new int[commonalityMatrix.length];
 		double[] sortedResults = Arrays.copyOf(result, result.length);
 		Arrays.sort(sortedResults);
 		
-
-		for(int i = 0; i < ranks.length; i++) {
-			ranks[i] = Arrays.binarySearch(sortedResults, result[i]);
+		//rank: index of the smallest page-rank to the largest
+		int[] ranks = new int[indices.length];
+		for(int i = 0; i < indices.length; i++) {
+			indices[i] = Arrays.binarySearch(sortedResults, result[i]);
+			ranks[indices[i]] = i;
 		}
-		return ranks;
+		
+		//System.out.println(Arrays.toString(sortedResults));
+		//System.out.println(Arrays.toString(result));
+		//System.out.println(Arrays.toString(indices));
+		//System.out.println(Arrays.toString(ranks));
+		
+		return(ranks);
 	}
 	
 	/**
