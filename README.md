@@ -16,6 +16,15 @@ News Articles used:
 * http://www.thelocal.de/20141204/merkel-speaks-out-against-net-neutrality
 * http://www.bbc.com/news/world-europe-30322198
 
+Java File List
+============
+* SummaryBot.java: Runs the summary process.
+* PageRanker.java: Runs page rank algorithm.
+* MiscUtils.java: Creates weighted adjacency matrix between sentences.
+* LuceneSentenceProcessor: Uses Lucene to remove stop words and tokenize.
+* OpenNLPSentenceProcessor: Removes sentences and uses POS tagging.
+* testMain.java: An example that summarizes the news article stored in a text file.
+
 References
 ==========
 1. http://pages.cs.wisc.edu/~goldberg/publications/summarization.pdf
