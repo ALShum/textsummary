@@ -57,7 +57,7 @@ public class SummaryBot {
 		int[] bestSentenceIndex= _ranker.RankItems(commonMatrix);
 		
 		String[] bestSentences = new String[Math.min(bestSentenceIndex.length, numberOfSummarySentences)];
-		System.out.println(Math.min(bestSentenceIndex.length, numberOfSummarySentences));
+		//System.out.println(Math.min(bestSentenceIndex.length, numberOfSummarySentences));
 
 		
 		//after finding the top sentences, earlier sentences in article should have priority.
