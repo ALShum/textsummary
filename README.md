@@ -25,7 +25,7 @@ Java File List
 * OpenNLPSentenceProcessor: Removes sentences and uses POS tagging.
 * testMain.java: An example that summarizes the news article stored in a text file.
 
-References
+More information
 ==========
 1. http://pages.cs.wisc.edu/~goldberg/publications/summarization.pdf
 2. http://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf
