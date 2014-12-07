@@ -35,7 +35,7 @@ public class MiscUtils {
 				}
 			}
 			//result[i][i]=0; //Or whatever we want to set how similar a sentence is to itself
-			results[i][i] = sentences.get(i).size() / 2 * Math.log(sentences.get(i).size());
+			result[i][i] = sentences.get(i).size() / 2 * Math.log(sentences.get(i).size());
 		}
 		for(int i=0;i<sentences.size();i++) {
 			for(int j=0;j<sentences.size();j++) {

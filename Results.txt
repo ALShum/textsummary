@@ -12,6 +12,10 @@ on 5 different news articles that are summarized to 5 sentences:
 5: http://www.bbc.com/news/world-europe-30322198
 
 
+########
+http://www.aljazeera.com/news/middleeast/2014/11/us-led-air-raids-target-syria-rebel-groups-2014116123052671427.html
+########
+
 Article 1
 
 1:
