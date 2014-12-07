@@ -16,7 +16,7 @@ public class testMain {
 		//nlpProc.SetRelevantTokenTags(new String[]{"CD", "FW", "JJ", "JJR", "JJS", "LS", "MD", "NN", "NNP", "NNPS", "NNS", "PDT", "PRP$", "RB", "RBR", "RBS", "RP", "SYM", "VB", "VBD", "VBG", "VBN", "VBP", "VBZ"});
 		PageRanker pageRanker = new PageRanker();
 		SummaryBot summaryBot = new SummaryBot(lProc, pageRanker);
-		File testFile = new File("Article5.txt");
+		File testFile = new File("testArticle.txt");
 		//AbstractList<String> sent=nlpProc.SeparateSentences(FileUtils.readFileToString(testFile, "utf-8"));
 		//for(String s : sent) {
 		//	System.out.println(s);

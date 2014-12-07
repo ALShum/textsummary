@@ -4,26 +4,27 @@ Compared Our summarizer to 3 others found online:
 3: http://autosummarizer.com/
 4: http://textcompactor.com/
 
-on 5 different news articles that are summarized to 5 sentences:
+on 6 different news articles that are summarized to 5 sentences:
 1: http://www.reuters.com/article/2014/12/04/us-vatican-economy-pell-idUSKCN0JI1CG20141204?feedType=RSS&feedName=worldNews
 2: http://thinkprogress.org/climate/2014/12/04/3599528/cruise-lines-sewage-2014/
 3: http://articles.economictimes.indiatimes.com/2014-12-02/news/56648982_1_syria-british-man-jihadis
 4: http://www.thelocal.de/20141204/merkel-speaks-out-against-net-neutrality
 5: http://www.bbc.com/news/world-europe-30322198
+6: http://www.aljazeera.com/news/middleeast/2014/11/us-led-air-raids-target-syria-rebel-groups-2014116123052671427.html
 
 
 Article 1
 
 1:
-Each department's financial statements will be reviewed by a major international auditing firm, the letter said.
+"Very few were tempted to tell the outside world what was happening, except when they needed extra help," he said, singling out the once-powerful Secretariat of State as one department that had especially jealously guarded its independence.
 
-As of Jan. 1, each department will have to enact "sound and efficient financial management policies" and prepare financial information and reports that meet international accounting standards.
+"It is important to point out that the Vatican is not broke ... the Holy See is paying its way, while possessing substantial assets and investments," Pell said, according to an advance text made available on Thursday.
 
-It has closed many suspicious accounts at its scandal-rocked bank.
+The Vatican's economy minister has said hundreds of millions of euros were found "tucked away" in accounts of various Holy See departments without having appeared in the city-state's balance sheets.
 
-Pell's office sent a letter to all Vatican departments last month about changes in economic ethics and accountability.
+In an article for Britain's Catholic Herald Magazine to be published on Friday, Australian Cardinal George Pell wrote that the discovery meant overall Vatican finances were in better shape than previously believed.
 
-Pell is an outsider from the English-speaking world transferred by Pope Francis from Sydney to Rome to oversee the Vatican's often muddled finances after decades of control by Italians.
+In his article, Pell said the reforms were "well under way and already past the point where the Vatican could return to the 'bad old days'."
 
 
 2:
@@ -54,22 +55,22 @@ Pell did not suggest any wrongdoing but said Vatican departments had long had "a
 
 Pell is an outsider from the English-speaking world transferred by Pope Francis from Sydney to Rome to oversee the Vatican's often muddled finances after decades of control by Italians.
 
-
-Comparison:
-Our text summary was able to pick out 5 relevant sentences that were similar to what the others said. The only sentence I could find that would have been better to include in the summary was " The Vaticans economy minister has said hundreds of millions of euros were found tucked away in accounts of various Holy See departments without having appeared in the city-states balance sheets."
-
 Article 2:
 
+
+
+
 1.
-But new fuel standards will kick in next year for both the United States and Canada, which should reduce sulfur emissions from each ship by 97 percent, and cut the emissions of soot by 85 percent.
+This is an industry worth billions of dollars that could install the most advanced sewage treatment and air pollution reduction technology available, said Marcie Keever, the oceans and vessels program director at FOE. Were encouraged that some cruise lines are taking incremental steps to improve their performance, but the entire industry must stop hiding behind weak regulations and take action to make sure the oceans their ships travel remain as clear as the photos in cruise brochures.
 
-That adds up to more than one billion gallons a year for the industry.
+This also inspired FOE to add a fourth transparency metric to the report card, for which all 16 cruise lines received an F.
 
-Such antiquated treatment systems leave harmful levels of fecal matter, bacteria, heavy metals and other contaminants in the water, FOE noted.
+Outside of the transparency issue, Disney Cruise Lines is apparently the most environmentally friendly, scoring an A for sewage treatment, a B- for air pollution reduction, and an A for water quality compliance.
 
-Federal law requires that cruise ships only dump treated wastewater if they are within three nautical miles of shore.
+Up through 2013, the report card had graded the cruise lines on three metrics: the quality of their sewage treatment technology, how much they reduce their air pollution through the use of cleaner fuels and plugging into onshore power, and how well they comply with water quality standards especially those established by the State of Alaska to protect its coasts.
 
-But beyond that point, it's essentially a free-for-all.
+But according to the press release from environmental group Friends of the Earth (FOE), over 40 percent of the 167 ships in operation still operate using waste treatment technology that?s more than 35 years old.
+
 
 2.
 FOE also cites data from the Environmental Protection Agency (EPA) which shows "an average cruise ship with 3,000 passengers and crew produces about 21,000 gallons of sewage a day enough to fill 10 backyard swimming pools in a week.
@@ -104,7 +105,6 @@ The centerpiece of FOE’s analysis was their Cruise Ship Report Card, which has c
 Up through 2013, the report card had graded the cruise lines on three metrics: the quality of their sewage treatment technology, how much they reduce their air pollution through the use of cleaner fuels and plugging into onshore power, and how well they comply with water quality standards — especially those established by the State of Alaska to protect its coasts.
 
 
-Comparison: In our summarizer, the 2nd and 5th sentences were not relevant, but the rest pulled important oints from the article. Summarizer 3 did a particularly poor job of summarizing. Focus on specific points that don't contribute to the larger article.
 
 Article 3:
 
@@ -113,11 +113,11 @@ It came days after a court heard how a British man was jailed for conspiring to 
 
 Radicalised foreigners have been drawn to IS, which has conducted a series of mass executions and other atrocities since launching its offensive in Iraq and Syria in June, the report said.
 
-Tanvir Sheikh, father of one of Majeed's friends who was still missing in Iraq, said he felt betrayed by his son.
+The report also mentioned the Indian national, Majeed, who went to syria to fight for the militant group and was later arrested by the National Investigation Agency (NIA) for terror-related offences when he arrived back home.
 
-A third fighter said he was "sick" of his time with the militant group, adding: "They make me do the washing up."
+Majeed told NIA officers he was sidelined by the jihadis for whom he fetched water and performed other lowly tasks such as cleaning toilets, instead of taking part in the deadly offensive like he wanted.
 
-Sheikh said his son Fahad had a job offer in Kuwait but instead he decided to travel to Iraq to join the extremists.
+Photos from the brother's phones showed the strict daily schedule at the camp included two sessions of military training, two sessions of "Islamic lessons" and "lights out" at 10 p.m., the report said.
 
 2.
 Jihadis, who travelled to Iraq and Syria to join the Islamic State (IS) are begging to be allowed to return home, complaining they were forced to do menial tasks, media reported Tuesday.
@@ -151,22 +151,22 @@ Al Qaeda announced in September a new chapter of its extremist movement charged 
 
 Tanvir Sheikh, father of one of Majeed's friends who was still missing in Iraq, said he felt betrayed by his son.
 
-Comparison:
-Our summarizer did about as well as number 2, giving a good feeling of what the article was reporting. The 3 summarizer article has a couple irrelevant sentences, while the last one does a poor job overall.
+
+
 
 
 Article 4:
 
 1
-"If Merkel goes into negotiations with the position she's outlined today, it will be very difficult for the European Council to find a common position," she said.
-
-Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
-
-Social Democratic Party (SPD) MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
-
 The Council, composed of the heads of state and government of all the EU member countries, must find a common negotiating position to deal with the European Parliament, which voted against a European Commission plan for regulations that would allow a two-tier internet in April.
 
 This is not the net neutrality we want, but a move towards the creation of a two-tier network where content becomes preferred based on who pays for it to make it so," said Markus Beckedahl, Berlin-based founder of netzpolitik.
+
+"If Merkel goes into negotiations with the position she's outlined today, it will be very difficult for the European Council to find a common position," she said.
+
+Social Democratic Party (SPD) MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
+
+Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
 
 2.
 Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
@@ -201,20 +201,25 @@ Merkel added that these special services would run over existing internet infras
 
 Social Democratic Party (SPD) MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
 
-Comparison: All summarizers was very similarin this article. They summarized it well.
+
+
+
+
+
 
 Article 5:
 
 1.
-Mr Putin said: "There is no doubt they would have loved to see the Yugoslavia scenario of collapse and dismemberment for us - with all the tragic consequences it would have for the peoples of Russia.
-
 So it's telling that Mr Putin chose to stress his unwavering hard line on the crisis in Ukraine: what happened in Kiev was an "illegal coup" and Crimea, which Russia annexed, is like "holy land" for Russia and will always be treated that way.
+
+Mr Putin said: "There is no doubt they would have loved to see the Yugoslavia scenario of collapse and dismemberment for us - with all the tragic consequences it would have for the peoples of Russia.
 
 He insisted the "tragedy" in Ukraine's south-east had proved that Russian policy had been right but said Russia would respect its neighbour as a brotherly country.
 
-It is not our design or desire that we see a Russia isolated through its own actions," Mr Kerry said.
+Other economic measures Mr Putin outlined included:    A four-year freeze on tax rates to help businesses    A drive by the central bank and government to combat "speculators"    Lending by the National Welfare Fund on favourable terms to major banks.
 
-Stressing that Russia remained "open for the world", Mr Putin suggested Western sanctions should be seen as a stimulus.
+Russians are believed to have taken more than $100bn out of the country this year and Mr Putin promised an amnesty for anyone choosing to bring their money back.
+
 
 
 2.
@@ -226,7 +231,7 @@ So it's telling that Mr Putin chose to stress his unwavering hard line on the cr
 
 Vladimir Putin again accused the West of meddling in Russia's internal affairs and using sanctions to "contain" the country as it grew stronger and more independent.
 
-Russians are believed to have taken more than $100bn ( 64bn; 81bn) out of the country this year and Mr Putin promised an amnesty for anyone choosing to bring their money back.
+Russians are believed to have taken more than $100bn out of the country this year and Mr Putin promised an amnesty for anyone choosing to bring their money back.
 
 3.
 He insisted the tragedy in Ukraines south-east had proved that Russian policy had been right but said Russia would respect its neighbour as a brotherly country.
@@ -251,4 +256,99 @@ Speaking to both chambers in the Kremlin, Mr Putin also accused Western governme
 He expressed no regrets for annexing Ukraine's Crimea peninsula, saying the territory had a "sacred meaning" for Russia.
 
 
-Comparison:
+
+
+
+
+Article 6:
+
+1.
+Activists in Syria told Al Jazeera the raids struck the Ahrar al-Sham rebel group in the northern province of Idlib, and the Syrian branch of al-Qaeda, the Nusra Front, in western Aleppo on Thursday.
+
+Air raids also targeted the Nusra Front in the Reef al-Muhandisin area of western Aleppo, reportedly killing several of the groups' fighters as well as six civilians.
+
+US-led air raids have struck Syrian rebels not linked to the Islamic State of Iraq and the Levant (ISIL), expanding the coalitions raids for the second time to other groups fighting in Syria.
+
+The US and Arab states have been carrying out air strikes against ISIL in Syria since September 23, in a bid to prevent the armed group from seizing more territory in the conflict-hit nation.
+
+One of Syria's largest armed opposition groups, Ahrar al-Sham is a key member of the Islamic Front coalition, which seeks a state run on Islamic principles as its fights to topple Syrian President Bashar al-Assad.
+
+
+2.
+US-led air raids have struck Syrian rebels not linked to the Islamic State of Iraq and the Levant (ISIL), expanding the coalitions raids for the second time to other groups fighting in Syria.
+
+Activists in Syria told Al Jazeera the raids struck the Ahrar al-Sham rebel group in the northern province of Idlib, and the Syrian branch of al-Qaeda, the Nusra Front, in western Aleppo on Thursday.
+
+One of Syria's largest armed opposition groups, Ahrar al-Sham is a key member of the Islamic Front coalition, which seeks a state run on Islamic principles as its fights to topple Syrian President Bashar al-Assad.
+
+There have been no reported attacks on groups outside ISIL since, but the latest air raids come after the group made gains against Western-backed rebel fighters in the Idlib region.
+
+3.
+US-led air raids have struck Syrian rebels not linked to the Islamic State of Iraq and the Levant , expanding the coalitions raids for the second time to other groups fighting in Syria.
+
+Activists in Syria told Al Jazeera the raids struck the Ahrar al-Sham rebel group in the northern province of Idlib, and the Syrian branch of al-Qaeda, the Nusra Front, in western Aleppo on Thursday.
+
+Air raids also targeted the Nusra Front in the Reef al-Muhandisin area of western Aleppo, reportedly killing several of the groups fighters as well as six civilians.
+
+There have been no reported attacks on groups outside ISIL since, but the latest air raids come after the group made gains against Western-backed rebel fighters in the Idlib region.
+
+
+4.
+US-led air raids have struck Syrian rebels not linked to the Islamic State of Iraq and the Levant (ISIL), expanding the coalitions raids for the second time to other groups fighting in Syria.
+
+Activists in Syria told Al Jazeera the raids struck the Ahrar al-Sham rebel group in the northern province of Idlib, and the Syrian branch of al-Qaeda, the Nusra Front, in western Aleppo on Thursday.
+
+At least six coalition air raids struck Idlib overnight, with one targeting an Ahrar al-Sham position in the village of Babska.
+
+One of Syria's largest armed opposition groups, Ahrar al-Sham is a key member of the Islamic Front coalition, which seeks a state run on Islamic principles as its fights to topple Syrian President Bashar al-Assad.
+
+Air raids also targeted the Nusra Front in the Reef al-Muhandisin area of western Aleppo, reportedly killing several of the groups' fighters as well as six civilians.
+
+
+
+
+Comparisons: The following will compare how many sentences were used by both our summarizer and each of the other ones, and make special mentioni of any sentences summarized by ours that were not summarized by any of the otehr ones.
+
+Note: it's necessary to add how many sentences could have been smilar since the online summarizers sometimes use less than five sentences.
+
+Article 1:
+summarizer 2: 1 out of 3 sentences were similar
+summarizer 3: 1 out of 4 sentences were similar
+summarizer 4: 0 out of 5 sentences were similar
+
+Although 4 of the 5 sentences our summarizer came up with were different, they still centered around the article's main topic.
+
+Article 2:
+summarizer 2: 2 out of 4 sentences were similar
+summarizer 3: 2 out of 5 sentences were similar
+summarizer 4: 1 out of 5 sentences were similar
+
+Again, the three sentences that weren't similar still provide important knowledge to the summary.
+
+Article 3:
+summarizer 2: 0 out of 4 sentences were similar
+summarizer 3: 0 out of 5 sentences were similar
+summarizer 4: 2 out of 5 sentences were similar
+
+In this article, none of the summarizers had very many similar sentences to eachother, but all summarized it well.
+
+Article 4:
+summarizer 2: 3 out of 5 sentences were similar
+summarizer 3: 3 out of 5 sentences were similar
+summarizer 4: 2 out of 5 sentences were similar
+
+The two sentences not similar were still good pieces of information.
+
+Article 5:
+summarizer 2: 2 out of 5 sentences were similar
+summarizer 3: 3 out of 5 sentences were similar
+summarizer 4: 0 out of 5 sentences were similar
+
+For whatever reason, in this article The last online summarizer did a poor job of summarizing, so it's probably good it didn't share any similar sentences with ours.
+
+Article 6:
+summarizer 2: 3 out of 4 sentences were similar
+summarizer 3: 3 out of 4 sentences were similar
+summarizer 4: 4 out of 5 sentences were similar
+
+In this aarticle only 1 sentences was not also summarized by the otehr ones.
