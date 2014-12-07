@@ -78,11 +78,6 @@ The next steps to be done include further examination of the bison’s gross anato
 
 She added, We expect that the results of these studies will reveal not only the cause of death of this particular specimen, but also might shed light on the species behavior and causes of its extinction."
 
-text = as.String(text)
-sent_token_annotator <- Maxent_Sent_Token_Annotator()
-sentences = annotate(text, list(sent_token_annotator))
-sentence_list = text[sentences]
-
 #does not remove stop words
 distance = function(sent1, sent2) {
 	#lower case
@@ -113,8 +108,15 @@ adj_matrix = function(sentence_list) {
 	return(adj)
 }
 
+
+
+text = as.String(text)
+sent_token_annotator <- Maxent_Sent_Token_Annotator()
+sentences = annotate(text, list(sent_token_annotator))
+sentence_list = text[sentences]
+
 adj = adj_matrix(sentence_list)
-vec = rep(1/17, 17)
+vec = rep(1/length(sentence_list), length(sentence_list))
 vec2 = vec
 
 adj = apply(adj, 2, function(x) {

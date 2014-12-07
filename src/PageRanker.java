@@ -33,12 +33,9 @@ public class PageRanker implements IRanker {
 		//rank: index of the smallest page-rank to the largest
 		int[] ranks = new int[result.length];
 		for(int i = 0; i < sortedResults.length; i++) {
-			//System.out.println(sortedResults[i].index + "," + i);
 			ranks[i] = sortedResults[i].index;
 			
 		}
-		
-		//System.out.println(Arrays.toString(commonalityMatrix[0])+"\n");
 		
 		//System.out.println(Arrays.toString(sortedResults));
 		//System.out.println(Arrays.toString(result));
@@ -120,22 +117,21 @@ public class PageRanker implements IRanker {
 		return(vec);
 	}
 	
-	private class Pair implements Comparable{
+	private class Pair implements Comparable<Pair> {
 		public double val;
 		public int index;
 		
 		public Pair(int i, double v) {
-			val=v;
-			index=i;
+			val = v;
+			index = i;
 		}
 		
 		@Override
-		public int compareTo(Object arg0) {
-			Pair p= (Pair)arg0;
-			if(p.val==val) return 0;
-			if(p.val>val) return 1;
+		public int compareTo(Pair arg0) {
+			Pair p = (Pair)arg0;
+			if(p.val == val) return 0;
+			if(p.val > val) return 1;
 			else return -1;
-		}
-		
+		}		
 	}
 }
