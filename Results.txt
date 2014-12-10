@@ -351,4 +351,4 @@ summarizer 2: 3 out of 4 sentences were similar
 summarizer 3: 3 out of 4 sentences were similar
 summarizer 4: 4 out of 5 sentences were similar
 
-In this article only 1 sentences was not also summarized by the otehr ones.
+In this article only 1 sentences was not also summarized by the other ones.
