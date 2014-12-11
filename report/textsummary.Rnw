@@ -74,7 +74,7 @@ In an article for Britain's Catholic Herald Magazine to be published on Friday, 
 \item The Vatican's economy minister has said hundreds of millions of euros were found ``tucked away'' in accounts of various Holy See departments without having appeared in the city-state's balance sheets.
 \item In an article for Britain's Catholic Herald Magazine to be published on Friday, Australian Cardinal George Pell wrote that the discovery meant overall Vatican finances were in better shape than previously believed.
 \item ``It is important to point out that the Vatican is not broke ... the Holy See is paying its way, while possessing substantial assets and investments,'' Pell said, according to an advance text made available on Thursday.
-\item ``Very few were tempted to tell the outside world what was happening, except when they needed extra help,'' he said, singling out the once-powerful Secretariat of State as one department that had especially jealously guarded its independence.
+\item Pell did not suggest any wrongdoing but said Vatican departments had long had "an almost free hand" with their finances and followed "long-established patterns" in managing their affairs.
 \item In his article, Pell said the reforms were ``well under way and already past the point where the Vatican could return to the 'bad old days'.''
 \end{itemize}
 \subsubsection*{Summarizer 2}
@@ -99,7 +99,7 @@ In an article for Britain's Catholic Herald Magazine to be published on Friday, 
 \item Pell is an outsider from the English-speaking world transferred by Pope Francis from Sydney to Rome to oversee the Vatican's often muddled finances after decades of control by Italians.
 \end{itemize}
 \subsubsection*{Overall Results}
-TextRank was able to match one sentence with summarizers 2 and 3 but none from summarizer 4.  However, even though TextRank only matched one sentence, the summary generated still has the important main points of the article.  In fact TextRank provided a bit more context than the other summarizers in including the second sentence identifying George Pell, author of a relavent article for a Catholic magazine.  The other summarizers mention Pell but miss the earlier references that introduce this source in the article.  
+TextRank was able to match one sentence with summarizers 2, two with summarizer 3, and one from summarizer 4.  However, even though TextRank only matched a few sentences, the summary generated still has the important main points of the article.  In fact TextRank provided a bit more context than the other summarizers in including the second sentence identifying George Pell, author of a relevant article for a Catholic magazine.  The other summarizers mention Pell but miss the earlier references that introduce this source in the article.  
 
 \subsection*{Article 2}
 \begin{quote}
@@ -113,10 +113,10 @@ Federal law requires that cruise ships only dump treated wastewater if they are 
 \subsubsection*{Summarizer 1}
 \begin{itemize}
 \item But according to the press release from environmental group Friends of the Earth (FOE), over 40 percent of the 167 ships in operation still operate using waste treatment technology that's more than 35 years old.
-\item FOE also cites data from the Environmental Protection Agency (EPA) which shows an average cruise ship with 3,000 passengers and crew produces about 21,000 gallons of sewage a day  enough to fill 10 backyard swimming pools in a week.
 \item This is an industry worth billions of dollars that could install the most advanced sewage treatment and air pollution reduction technology available, said Marcie Keever, the oceans and vessels program director at FOE. We're encouraged that some cruise lines are taking incremental steps to improve their performance, but the entire industry must stop hiding behind weak regulations and take action to make sure the oceans their ships travel remain as clear as the photos in cruise brochures.
-\item Up through 2013, the report card had graded the cruise lines on three metrics: the quality of their sewage treatment technology, how much they reduce their air pollution through the use of cleaner fuels and plugging into onshore power, and how well they comply with water quality standards especially those established by the State of Alaska to protect its coasts.
-\item This also inspired FOE to add a fourth transparency metric to the report card, for which all 16 cruise lines received an F.
+\item But for the 2014 report, all 16 cruise lines apparently refused to respond to FOE's request for information on their pollution reduction efforts forcing the group to rely on federal data.
+\item Outside of the transparency issue, Disney Cruise Lines is apparently the most environmentally friendly, scoring an A for sewage treatment, a B- for air pollution reduction, and an A for water quality compliance.
+\item According to FOE, data from EPA also shows that each day an average cruise ship is at sea it emits more sulfur dioxide than 13 million cars and more soot than one million cars.
 \end{itemize}
 \subsubsection*{Summarizer 2}
 \begin{itemize}
@@ -142,7 +142,7 @@ Federal law requires that cruise ships only dump treated wastewater if they are 
 \item Up through 2013, the report card had graded the cruise lines on three metrics: the quality of their sewage treatment technology, how much they reduce their air pollution through the use of cleaner fuels and plugging into onshore power, and how well they comply with water quality standards - especially those established by the State of Alaska to protect its coasts.
 \end{itemize}
 \subsubsection*{Overall Results}
-TextRank identified two of the same sentences as summarizer 2 and 3 and one sentence from summarizer 4.  Although the summarizer includes some of the main points of the article including mention of the EPA reports, it misses the overall summary sentence.  Summarizer 4's first sentence is a good overview of the article that the other summarizers miss.  However, TextRank includes context about the ``Friends of Earth (FOE)''.  The other summarizers mention FOE in their summary sentences but without earlier context a reader would not understand the meaning of this term.
+TextRank identified two of the same sentences as summarizer 2, one with summarizer 3, and no sentences from summarizer 4.  Although the summarizer includes some of the main points of the article including mention of the EPA reports, it misses the overall summary sentence.  Summarizer 4's first sentence is a good overview of the article that the other summarizers miss.  However, TextRank includes context about the ``Friends of Earth (FOE)''.  The other summarizers mention FOE in their summary sentences but without earlier context a reader would not understand the meaning of this term.
 
 \subsection*{Article 3}
 \begin{quote}
@@ -155,10 +155,10 @@ A series of weepy messages leaked to the French daily Le Figaro revealed a numbe
 
 \subsubsection*{Summarizer 1}
 \begin{itemize}
-\item The report also mentioned the Indian national, Majeed, who went to syria to fight for the militant group and was later arrested by the National Investigation Agency (NIA) for terror-related offences when he arrived back home.
-\item Majeed told NIA officers he was sidelined by the jihadis for whom he fetched water and performed other lowly tasks such as cleaning toilets, instead of taking part in the deadly offensive like he wanted.
+\item A third fighter said he was "sick" of his time with the militant group, adding: "They make me do the washing up."
+\item Tanvir Sheikh, father of one of Majeed's friends who was still missing in Iraq, said he felt betrayed by his son.
+\item Sheikh said his son Fahad had a job offer in Kuwait but instead he decided to travel to Iraq to join the extremists.
 \item It came days after a court heard how a British man was jailed for conspiring to attend a terror training camp in Syria after he returned home after whining to his girlfriend about his treatment abroad.
-\item Photos from the brother's phones showed the strict daily schedule at the camp included two sessions of military training, two sessions of ``Islamic lessons'' and ``lights out'' at 10 p.m., the report said.
 \item Radicalised foreigners have been drawn to IS, which has conducted a series of mass executions and other atrocities since launching its offensive in Iraq and Syria in June, the report said.
 \end{itemize}
 \subsubsection*{Summarizer 2}
@@ -185,7 +185,7 @@ A series of weepy messages leaked to the French daily Le Figaro revealed a numbe
 \item Tanvir Sheikh, father of one of Majeed's friends who was still missing in Iraq, said he felt betrayed by his son.
 \end{itemize}
 \subsubsection*{Overall Results}
-TextRank identified zero of the same sentences as summarizers 2 and 3 and identified two sentences in common with summarizer 4.  TextRank missed the first summary sentence from summarizer 2 and 3 but includes some of the examples of why foreigners are regretting joining ISIS.  Overall this article was relatively difficult to summarize and both TextRank and summarizer 4 did fairly poor on this article.
+TextRank identified zero of the same sentences as summarizers 2 and 3 and identified one sentence in common with summarizer 4.  TextRank missed the first summary sentence from summarizer 2 and 3 but includes some of the examples of why foreigners are regretting joining ISIS.  Overall this article was relatively difficult to summarize and both TextRank and summarizer 4 did fairly poor on this article.
 
 \subsection*{Article 4}
 \begin{quote}
@@ -229,7 +229,7 @@ At the Vodafone-hosted Digitising Europe conference in Berlin, she called for a 
 \item Social Democratic Party (SPD) MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
 \end{itemize}
 \subsubsection*{Overall Results}
-TextRank was able to match 3 of the sentences from summarizer 2 and 3 and matches 2 of the sentences from summarizer 4.
+TextRank was able to match 3 of the sentences from summarizer 2 and two of the sentences from summarizer 3 and 4.
 
 \subsection*{Article 5}
 \begin{quote}
@@ -242,11 +242,11 @@ The rouble, once a symbol of stability under Mr Putin, suffered its biggest one-
 
 \subsubsection*{Summarizer 1}
 \begin{itemize}
-\item Mr Putin said: ``There is no doubt they would have loved to see the Yugoslavia scenario of collapse and dismemberment for us - with all the tragic consequences it would have for the peoples of Russia''.
-\item So it's telling that Mr Putin chose to stress his unwavering hard line on the crisis in Ukraine: what happened in Kiev was an ``illegal coup'' and Crimea, which Russia annexed, is like ``holy land'' for Russia and will always be treated that way.
 \item He insisted the "tragedy" in Ukraine's south-east had proved that Russian policy had been right but said Russia would respect its neighbour as a brotherly country.
-\item Other economic measures Mr Putin outlined included: A four-year freeze on tax rates to help businesses    A drive by the central bank and government to combat ``speculators''    Lending by the National Welfare Fund on favourable terms to major banks.
-\item Russians are believed to have taken more than 100bn out of the country this year and Mr Putin promised an amnesty for anyone choosing to bring their money back.
+\item It is not our design or desire that we see a Russia isolated through its own actions," Mr Kerry said.
+\item So it's telling that Mr Putin chose to stress his unwavering hard line on the crisis in Ukraine: what happened in Kiev was an "illegal coup" and Crimea, which Russia annexed, is like "holy land" for Russia and will always be treated that way.
+\item Stressing that Russia remained "open for the world", Mr Putin suggested Western sanctions should be seen as a stimulus.
+\item Mr Putin said: "There is no doubt they would have loved to see the Yugoslavia scenario of collapse and dismemberment for us - with all the tragic consequences it would have for the peoples of Russia.
 \end{itemize}
 \subsubsection*{Summarizer 2}
 \begin{itemize}
@@ -273,7 +273,7 @@ The rouble, once a symbol of stability under Mr Putin, suffered its biggest one-
 \item He expressed no regrets for annexing Ukraine's Crimea peninsula, saying the territory had a ``sacred meaning'' for Russia.
 \end{itemize}
 \subsubsection*{Overall Results}
-TextRank matches two sentences with summarizer 2, three sentences with summarizer 3 and no sentences with summarizer 4.
+TextRank matches one sentence with summarizer 2, three sentences with summarizer 3 and no sentences with summarizer 4.
 
 \subsection*{Article 6}
 \begin{quote}
@@ -288,9 +288,9 @@ At least six coalition air raids struck Idlib overnight, with one targeting an A
 \begin{itemize}
 \item US-led air raids have struck Syrian rebels not linked to the Islamic State of Iraq and the Levant (ISIL), expanding the coalitions raids for the second time to other groups fighting in Syria.
 \item Activists in Syria told Al Jazeera the raids struck the Ahrar al-Sham rebel group in the northern province of Idlib, and the Syrian branch of al-Qaeda, the Nusra Front, in western Aleppo on Thursday.
-\item One of Syria's largest armed opposition groups, Ahrar al-Sham is a key member of the Islamic Front coalition, which seeks a state run on Islamic principles as its fights to topple Syrian President Bashar al-Assad.
 \item Air raids also targeted the Nusra Front in the Reef al-Muhandisin area of western Aleppo, reportedly killing several of the groups' fighters as well as six civilians.
 \item The US and Arab states have been carrying out air strikes against ISIL in Syria since September 23, in a bid to prevent the armed group from seizing more territory in the conflict-hit nation.
+\item There have been no reported attacks on groups outside ISIL since, but the latest air raids come after the group made gains against Western-backed rebel fighters in the Idlib region.
 \end{itemize}
 \subsubsection*{Summarizer 2}
 \begin{itemize}
@@ -315,7 +315,7 @@ At least six coalition air raids struck Idlib overnight, with one targeting an A
 \item Air raids also targeted the Nusra Front in the Reef al-Muhandisin area of western Aleppo, reportedly killing several of the groups' fighters as well as six civilians.
 \end{itemize}
 \subsubsection*{Overall Results}
-TextRank matches three sentences with summarizer 2 and 3 and four sentences with summarizer 4.  All the summarizers did a fair job of summarizing this particular article.
+TextRank matches three sentences with summarizer 2 and 4 and four sentences with summarizer 3.  All the summarizers did a fair job of summarizing this particular article.
 
 \section*{Conclusion}
 Overall TextRank's results were comparable to the other summarizers most of the time.  TextRank was able to include some context that the other summarizers missed.  For some of the more difficult results TextRank had comparable results to the other online summarizers.  In some cases where TextRank missed important information in the summary it was still able to match a large number of sentences that the other summarizers identified.  These are promising results as our implementation of TextRank uses very few heuristics.  The only heuristic we employed was the ordering of the returned sentences; we did not employ heuristics for sentence position or paragraph position as we suspect the online summarizers used.  Possible future work would involve comparing the results of difference weighting functions and sentence position heuristics.  Additionally news article titles are important overviews of the article and a possible extension would be to give some weight or prior to text contained in an article's title.

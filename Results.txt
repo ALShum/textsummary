@@ -16,13 +16,13 @@ on 6 different news articles that are summarized to 5 sentences:
 Article 1
 
 1:
-"Very few were tempted to tell the outside world what was happening, except when they needed extra help," he said, singling out the once-powerful Secretariat of State as one department that had especially jealously guarded its independence.
-
-"It is important to point out that the Vatican is not broke ... the Holy See is paying its way, while possessing substantial assets and investments," Pell said, according to an advance text made available on Thursday.
-
 The Vatican's economy minister has said hundreds of millions of euros were found "tucked away" in accounts of various Holy See departments without having appeared in the city-state's balance sheets.
 
 In an article for Britain's Catholic Herald Magazine to be published on Friday, Australian Cardinal George Pell wrote that the discovery meant overall Vatican finances were in better shape than previously believed.
+
+"It is important to point out that the Vatican is not broke ... the Holy See is paying its way, while possessing substantial assets and investments," Pell said, according to an advance text made available on Thursday.
+
+Pell did not suggest any wrongdoing but said Vatican departments had long had "an almost free hand" with their finances and followed "long-established patterns" in managing their affairs.
 
 In his article, Pell said the reforms were "well under way and already past the point where the Vatican could return to the 'bad old days'."
 
@@ -55,21 +55,20 @@ Pell did not suggest any wrongdoing but said Vatican departments had long had "a
 
 Pell is an outsider from the English-speaking world transferred by Pope Francis from Sydney to Rome to oversee the Vatican's often muddled finances after decades of control by Italians.
 
+
 Article 2:
 
 
-
-
 1.
-This is an industry worth billions of dollars that could install the most advanced sewage treatment and air pollution reduction technology available, said Marcie Keever, the oceans and vessels program director at FOE. Were encouraged that some cruise lines are taking incremental steps to improve their performance, but the entire industry must stop hiding behind weak regulations and take action to make sure the oceans their ships travel remain as clear as the photos in cruise brochures.
+But according to the press release from environmental group Friends of the Earth (FOE), over 40 percent of the 167 ships in operation still operate using waste treatment technology that's more than 35 years old.
 
-This also inspired FOE to add a fourth transparency metric to the report card, for which all 16 cruise lines received an F.
+This is an industry worth billions of dollars that could install the most advanced sewage treatment and air pollution reduction technology available, said Marcie Keever, the oceans and vessels program director at FOE.
+
+But for the 2014 report, all 16 cruise lines apparently refused to respond to FOE's request for information on their pollution reduction efforts forcing the group to rely on federal data.
 
 Outside of the transparency issue, Disney Cruise Lines is apparently the most environmentally friendly, scoring an A for sewage treatment, a B- for air pollution reduction, and an A for water quality compliance.
 
-Up through 2013, the report card had graded the cruise lines on three metrics: the quality of their sewage treatment technology, how much they reduce their air pollution through the use of cleaner fuels and plugging into onshore power, and how well they comply with water quality standards especially those established by the State of Alaska to protect its coasts.
-
-But according to the press release from environmental group Friends of the Earth (FOE), over 40 percent of the 167 ships in operation still operate using waste treatment technology that?s more than 35 years old.
+According to FOE, data from EPA also shows that each day an average cruise ship is at sea it emits more sulfur dioxide than 13 million cars and more soot than one million cars.
 
 
 2.
@@ -109,15 +108,15 @@ Up through 2013, the report card had graded the cruise lines on three metrics: t
 Article 3:
 
 1.
+A third fighter said he was "sick" of his time with the militant group, adding: "They make me do the washing up."
+
+Tanvir Sheikh, father of one of Majeed's friends who was still missing in Iraq, said he felt betrayed by his son.
+
+Sheikh said his son Fahad had a job offer in Kuwait but instead he decided to travel to Iraq to join the extremists.
+
 It came days after a court heard how a British man was jailed for conspiring to attend a terror training camp in Syria after he returned home after whining to his girlfriend about his treatment abroad.
 
 Radicalised foreigners have been drawn to IS, which has conducted a series of mass executions and other atrocities since launching its offensive in Iraq and Syria in June, the report said.
-
-The report also mentioned the Indian national, Majeed, who went to syria to fight for the militant group and was later arrested by the National Investigation Agency (NIA) for terror-related offences when he arrived back home.
-
-Majeed told NIA officers he was sidelined by the jihadis for whom he fetched water and performed other lowly tasks such as cleaning toilets, instead of taking part in the deadly offensive like he wanted.
-
-Photos from the brother's phones showed the strict daily schedule at the camp included two sessions of military training, two sessions of "Islamic lessons" and "lights out" at 10 p.m., the report said.
 
 2.
 Jihadis, who travelled to Iraq and Syria to join the Islamic State (IS) are begging to be allowed to return home, complaining they were forced to do menial tasks, media reported Tuesday.
@@ -158,15 +157,15 @@ Tanvir Sheikh, father of one of Majeed's friends who was still missing in Iraq, 
 Article 4:
 
 1
-The Council, composed of the heads of state and government of all the EU member countries, must find a common negotiating position to deal with the European Parliament, which voted against a European Commission plan for regulations that would allow a two-tier internet in April.
-
-This is not the net neutrality we want, but a move towards the creation of a two-tier network where content becomes preferred based on who pays for it to make it so," said Markus Beckedahl, Berlin-based founder of netzpolitik.
-
-"If Merkel goes into negotiations with the position she's outlined today, it will be very difficult for the European Council to find a common position," she said.
+Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
 
 Social Democratic Party (SPD) MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
 
-Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
+"If Merkel goes into negotiations with the position she's outlined today, it will be very difficult for the European Council to find a common position," she said.
+
+The Council, composed of the heads of state and government of all the EU member countries, must find a common negotiating position to deal with the European Parliament, which voted against a European Commission plan for regulations that would allow a two-tier internet in April.
+
+This is not the net neutrality we want, but a move towards the creation of a two-tier network where content becomes preferred based on who pays for it to make it so," said Markus Beckedahl, Berlin-based founder of netzpolitik.
 
 2.
 Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
@@ -210,16 +209,15 @@ Social Democratic Party (SPD) MEP Petra Kammerevert told The Local that this wou
 Article 5:
 
 1.
-So it's telling that Mr Putin chose to stress his unwavering hard line on the crisis in Ukraine: what happened in Kiev was an "illegal coup" and Crimea, which Russia annexed, is like "holy land" for Russia and will always be treated that way.
-
-Mr Putin said: "There is no doubt they would have loved to see the Yugoslavia scenario of collapse and dismemberment for us - with all the tragic consequences it would have for the peoples of Russia.
-
 He insisted the "tragedy" in Ukraine's south-east had proved that Russian policy had been right but said Russia would respect its neighbour as a brotherly country.
 
-Other economic measures Mr Putin outlined included:    A four-year freeze on tax rates to help businesses    A drive by the central bank and government to combat "speculators"    Lending by the National Welfare Fund on favourable terms to major banks.
+It is not our design or desire that we see a Russia isolated through its own actions," Mr Kerry said.
 
-Russians are believed to have taken more than $100bn out of the country this year and Mr Putin promised an amnesty for anyone choosing to bring their money back.
+So it's telling that Mr Putin chose to stress his unwavering hard line on the crisis in Ukraine: what happened in Kiev was an "illegal coup" and Crimea, which Russia annexed, is like "holy land" for Russia and will always be treated that way.
 
+Stressing that Russia remained "open for the world", Mr Putin suggested Western sanctions should be seen as a stimulus.
+
+Mr Putin said: "There is no doubt they would have loved to see the Yugoslavia scenario of collapse and dismemberment for us - with all the tragic consequences it would have for the peoples of Russia.
 
 
 2.
@@ -263,15 +261,15 @@ He expressed no regrets for annexing Ukraine's Crimea peninsula, saying the terr
 Article 6:
 
 1.
+US-led air raids have struck Syrian rebels not linked to the Islamic State of Iraq and the Levant (ISIL), expanding the coalitions raids for the second time to other groups fighting in Syria.
+
 Activists in Syria told Al Jazeera the raids struck the Ahrar al-Sham rebel group in the northern province of Idlib, and the Syrian branch of al-Qaeda, the Nusra Front, in western Aleppo on Thursday.
 
 Air raids also targeted the Nusra Front in the Reef al-Muhandisin area of western Aleppo, reportedly killing several of the groups' fighters as well as six civilians.
 
-US-led air raids have struck Syrian rebels not linked to the Islamic State of Iraq and the Levant (ISIL), expanding the coalitions raids for the second time to other groups fighting in Syria.
-
 The US and Arab states have been carrying out air strikes against ISIL in Syria since September 23, in a bid to prevent the armed group from seizing more territory in the conflict-hit nation.
 
-One of Syria's largest armed opposition groups, Ahrar al-Sham is a key member of the Islamic Front coalition, which seeks a state run on Islamic principles as its fights to topple Syrian President Bashar al-Assad.
+There have been no reported attacks on groups outside ISIL since, but the latest air raids come after the group made gains against Western-backed rebel fighters in the Idlib region.
 
 
 2.
@@ -313,34 +311,34 @@ Note: it's necessary to add how many sentences could have been smilar since the 
 
 Article 1:
 summarizer 2: 1 out of 3 sentences were similar
-summarizer 3: 1 out of 4 sentences were similar
-summarizer 4: 0 out of 5 sentences were similar
+summarizer 3: 2 out of 4 sentences were similar
+summarizer 4: 1 out of 5 sentences were similar
 
 Although 4 of the 5 sentences our summarizer came up with were different, they still centered around the article's main topic.
 
 Article 2:
 summarizer 2: 2 out of 4 sentences were similar
-summarizer 3: 2 out of 5 sentences were similar
-summarizer 4: 1 out of 5 sentences were similar
+summarizer 3: 1 out of 5 sentences were similar
+summarizer 4: 0 out of 5 sentences were similar
 
 Again, the three sentences that weren't similar still provide important knowledge to the summary.
 
 Article 3:
 summarizer 2: 0 out of 4 sentences were similar
 summarizer 3: 0 out of 5 sentences were similar
-summarizer 4: 2 out of 5 sentences were similar
+summarizer 4: 1 out of 5 sentences were similar
 
 In this article, none of the summarizers had very many similar sentences to eachother, but all summarized it well.
 
 Article 4:
 summarizer 2: 3 out of 5 sentences were similar
-summarizer 3: 3 out of 5 sentences were similar
+summarizer 3: 2 out of 5 sentences were similar
 summarizer 4: 2 out of 5 sentences were similar
 
 The two sentences not similar were still good pieces of information.
 
 Article 5:
-summarizer 2: 2 out of 5 sentences were similar
+summarizer 2: 1 out of 5 sentences were similar
 summarizer 3: 3 out of 5 sentences were similar
 summarizer 4: 0 out of 5 sentences were similar
 
@@ -348,7 +346,7 @@ For whatever reason, in this article The last online summarizer did a poor job o
 
 Article 6:
 summarizer 2: 3 out of 4 sentences were similar
-summarizer 3: 3 out of 4 sentences were similar
-summarizer 4: 4 out of 5 sentences were similar
+summarizer 3: 4 out of 4 sentences were similar
+summarizer 4: 3 out of 5 sentences were similar
 
 In this article only 1 sentences was not also summarized by the other ones.
