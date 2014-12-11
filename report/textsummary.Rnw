@@ -6,7 +6,7 @@
 \usepackage[margin=0.70in]{geometry}
 \setlength{\parindent}{0in}
 \title{Unsupervised Method Summarizing News Articles}
-\author{Alex Shum, Robert }
+\author{Alex Shum, Robert Corell-Johanns}
 
 \begin{document}
 \maketitle
