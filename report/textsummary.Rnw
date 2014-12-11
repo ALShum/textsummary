@@ -33,17 +33,32 @@ Before running the TextRank algorithm some basic text preprocessing was done.  P
 \\
 Our Java implementation of TextRank is split into seven java class files. The most important file is the SummaryBot.java file that defines a SummaryBot object. A SummaryBot is meant to take in a string or a text file containing an article and summarize it down to just a few sentences. To do this it first extracts the text from the file and then sends it to a ISentenceProcessor object.  The SentenceProcessor object is to separate the text into sentences and remove unnecessary or irrelevant words.  Initially sentence processing was done solely in openNLP with OpenNLPSentenceProcessor.java.  However, openNLP does not have stop word removal and we used part-of-speech tagging to accomplish the same task.  Due to computation time and better stop word removal we implemented the sentence processing with both libraries and this is contained in LuceneSentenceProcessor.java.\\
 \\
-After being processed, the sentences are passed to the CreateCommonMatrix method in MiscUtils.java which creates an adjacency matrix $A$ where $a_{i, j}$ represents the number of words shared between sentences i and j.  Then the matrix is sent to the IRanker object which uses some method to rank the sentences based on values in the matrix. We implemented using the PageRanker class which iteratively calculates the weighted page rank to accomplish this task. Finally, with the results from the Ranker object, the SummaryBot is able to print the best sentences for summarizing the article.\\
+After being processed, the sentences are passed to the CreateCommonMatrix method in MiscUtils.java which creates an adjacency matrix $A$ where $a_{i, j}$ represents the number of words shared between sentences i and j.  Then the matrix is sent to the IRanker object which uses some method to rank the sentences based on values in the matrix. We implemented using the PageRanker class which iteratively calculates the weighted page rank to accomplish this task. Finally, with the results from the Ranker object, the SummaryBot is able to print the best sentences for summarizing the article.  All of the java source code can be found at our repository: \url{http://www.github.com/ALShum/textsummary}.\\
 \\
 As a final heuristic, SummaryBot returns the top sentences in the same order that they appear in the original 	article text.  When sentences were returned based strictly on highest PageRank, it was quite common for the top sentence to make a reference to something that appeared earlier in the article.  By returning sentences in the same order as the text in the article it increases the likelihood that the summary sentences will follow the same logical ordering as the original text.
 
 \section*{Results}
-Since this is not a supervised algorithm testing the results was not straightforward.  We did not have the resources to compare TextRank's results with human results.  There are a few numerical measures used to evaluation performance based on N-gram statistics.  Our goal was to have more interpretable results and we compare our implementation of TextRank against other available text summerizers.
+Since this is not a supervised algorithm testing the results was not straightforward.  We did not have the resources to compare TextRank's results with human results.  There are a few numerical measures used to evaluation performance based on N-gram statistics.  Our goal was to have more interpretable results and we compare our implementation of TextRank against ``the competition'' -- other available text summerizers.  We compare our results against the following online text summarizers:
+\begin{enumerate}
+\item \url{http://freesummarizer.com/}
+\item \url{http://autosummarizer.com/}
+\item \url{http://textcompactor.com/}
+\end{enumerate}
 
-To test our summarizer, we took six articles and ran it through four different summarizers including ours. We then looked to see how many sentences were summarized by ours and by the others.\\
+For evaluation purposes we randomly choose the following six news articles from various sources:
+\begin{enumerate}
+\item \url{http://www.reuters.com/article/2014/12/04/us-vatican-economy-pell idUSKCN0JI1CG20141204?feedType=RSS&feedName=worldNews}
+\item \url{http://thinkprogress.org/climate/2014/12/04/3599528/cruise-lines-sewage-2014/}
+\item \url{http://articles.economictimes.indiatimes.com/2014-12-02/news/56648982_1_syria-british-man-jihadis}
+\item \url{http://www.thelocal.de/20141204/merkel-speaks-out-against-net-neutrality}
+\item \url{http://www.bbc.com/news/world-europe-30322198}
+\item \url{http://www.aljazeera.com/news/middleeast/2014/11/us-led-air-raids-target-syria-rebel-groups-2014116123052671427.html}
+\end{enumerate}
+
+We use our implementation of TextRank against other online text summarizers for the articles mentioned above.  We check the similarity in terms of the number of matched sentences between the above summarizers and TextRank.  Complete results can be found at our repository: \url{http://www.github.com/ALShum/textsummary/blob/master/Results.txt}.
 \\
-Here are the results of testing our summarizer. If you want more details such as what sentences were actually generated by each summarizer, refer to the results.txt document.\\
-\\
+The following is a summary of the results. 
+
 Note: it's necessary to add how many sentences could have been smilar since the online summarizers sometimes use less than five sentences.\\
 \\
 Article 1:\\summarizer 2: 1 out of 3 sentences were similar\\summarizer 3: 1 out of 4 sentences were similar\\summarizer 4: 0 out of 5 sentences were similar\\
