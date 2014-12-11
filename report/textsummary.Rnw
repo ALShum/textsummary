@@ -26,7 +26,7 @@ More recently a few graph based methods based on the PageRank algorithm have bee
 \section*{Introduction to TextRank}
 The TextRank method is based on the PageRank algorithm.  The original PageRank algorithm is based around the idea of a random websurfer [9]; how likely are they to end up at a particular page by following hyperlinks?  The original PageRank algorithm worked on graphs with unweighted edges and the PageRank of a particular page was given by $rank(v_i) = (1 - d) + d \Sigma_{j \in in(v_i)} \frac{rank(v_j)}{|out(v_j)|}$ where $v_i$ and $v_j$ represent webpages, $in(v_j)$ represents the set of vertices that links to page $i$, $out(v_j)$ represents the pages that link from page $j$, and $d$ represents the dampening factor.  The dampening factor represents the websurfer jumping to a random page.\\
 \\
-TextRank represents sentences as vertices and edges between sentences is weighted by the following distance function: $d(s_i, s_j) = \frac{|\{w_k | w_k \in s_i & w_k \in s_j \}|}{log(|s_i|) + log(|s_j|)}$.  $s_i$ and $s_j$ represent sentence $i$ and sentence $j$.  Each sentence is a set of sets and the distance metric is the cardinality of the intersection between two sentence sets divided by the sum of the logs of the sentence lengths.  This distance function for edge weights introduces a seperate issue: the original PageRank algorithm is for unweighted graphs.  In order to get around this issue a weighted variation of PageRank is used: $rank(s_i) = (1 - d) + d \Sigma_{s_j \in In(s_i)} \frac{w_{ji}}{\Sigma_{s_k \in out(s_j)} rank(s_j)}$.  $s_i$ and $s_j$ represent sentence $i$ and sentence $j$ and $w_{ji}$ represents the edge weight between sentence $j$ and $i$.  It turns out with this slight modification we can iteratively calculate the page rank of sentences in a document.
+TextRank represents sentences as vertices and edges between sentences is weighted by the following distance function: $d(s_i, s_j) = \frac{|\{w_k | w_k \in s_i \& w_k \in s_j \}|}{log(|s_i|) + log(|s_j|)}$.  $s_i$ and $s_j$ represent sentence $i$ and sentence $j$.  Each sentence is a set of sets and the distance metric is the cardinality of the intersection between two sentence sets divided by the sum of the logs of the sentence lengths.  This distance function for edge weights introduces a seperate issue: the original PageRank algorithm is for unweighted graphs.  In order to get around this issue a weighted variation of PageRank is used: $rank(s_i) = (1 - d) + d \Sigma_{s_j \in In(s_i)} \frac{w_{ji}}{\Sigma_{s_k \in out(s_j)} rank(s_j)}$.  $s_i$ and $s_j$ represent sentence $i$ and sentence $j$ and $w_{ji}$ represents the edge weight between sentence $j$ and $i$.  It turns out with this slight modification we can iteratively calculate the page rank of sentences in a document.
 
 \section*{Implementation and Java Code}
 Before running the TextRank algorithm some basic text preprocessing was done.  Punctuation was stripped from the text and stop words, words with little semantic meaning, were removed from the text using the Lucene library [7].  The text was parsed into individual sentences using the openNLP library.  The adjacency matrix was calculated between all sentences.  The adjacency matrix was normalized so that the columns sum to one and then the weighted pagerank is calculated iteratively.\\
@@ -38,8 +38,9 @@ After being processed, the sentences are passed to the CreateCommonMatrix method
 As a final heuristic, SummaryBot returns the top sentences in the same order that they appear in the original 	article text.  When sentences were returned based strictly on highest PageRank, it was quite common for the top sentence to make a reference to something that appeared earlier in the article.  By returning sentences in the same order as the text in the article it increases the likelihood that the summary sentences will follow the same logical ordering as the original text.
 
 \section*{Results}
-Since this is not a supervised algorithm testing the results was not straightforward.  We did not have the resources to compare TextRank's results with human results.  There are a few numerical measures used to evaluation performance based on N-gram statistics.  Our goal was to have more interpretable results and we compare our implementation of TextRank against ``the competition'' -- other available text summerizers.  We compare our results against the following online text summarizers:
+Since this is not a supervised algorithm testing the results was not straightforward.  We did not have the resources to compare TextRank's results with human results.  There are a few numerical measures used to evaluation performance based on N-gram statistics.  Our goal was to have more interpretable results and we compare our implementation of TextRank against ``the competition'' -- other available text summerizers.  The following is a list of summarizers used:
 \begin{enumerate}
+\item Java TextRank implementation.
 \item \url{http://freesummarizer.com/}
 \item \url{http://autosummarizer.com/}
 \item \url{http://textcompactor.com/}
@@ -55,42 +56,269 @@ For evaluation purposes we randomly choose the following six news articles from 
 \item \url{http://www.aljazeera.com/news/middleeast/2014/11/us-led-air-raids-target-syria-rebel-groups-2014116123052671427.html}
 \end{enumerate}
 
-We use our implementation of TextRank against other online text summarizers for the articles mentioned above.  We check the similarity in terms of the number of matched sentences between the above summarizers and TextRank.  Complete results can be found at our repository: \url{http://www.github.com/ALShum/textsummary/blob/master/Results.txt}.
+We use our implementation of TextRank against other online text summarizers for the articles mentioned above.  We check the similarity in terms of the number of matched sentences between the above summarizers and TextRank.  Additionally we try to identify which summary includes the most context and main points from the main article.  Complete results can be found at our repository: \url{http://www.github.com/ALShum/textsummary/blob/master/Results.txt}.
 \\
-The following is a summary of the results.  Summarizer 1 refers to TextRank and summarizers 2, 3, 4 refer respectively to the online summarizers listed above.  Articles 1 through 6 refer to the articles listed above respectively.  For TextRank we always return the top 5 sentences that summarize the entire news article.  The online summarizers return a varying number of sentences depending on the news article.
+The following is a summary of the results.  Summerizer 1 refers to our Java implementation of TextRank and summarizers 2, 3, 4 refer respectively to the online summarizers listed above.  Articles 1 through 6 refer to the articles listed above respectively.  For TextRank we always return the top 5 sentences that summarize the entire news article.  The online summarizers return a varying number of sentences depending on the news article.  For context purposes we include the first three paragraphs of each news article as well as the summaries from the respective summarizers.
 
-\subsection*{article 1}
-summarizer 2: 1 out of 3 sentences were similar\\summarizer 3: 1 out of 4 sentences were similar\\summarizer 4: 0 out of 5 sentences were similar.
+\subsection*{Article 1}
+\begin{quote}
+The Vatican's economy minister has said hundreds of millions of euros were found ``tucked away'' in accounts of various Holy See departments without having appeared in the city-state's balance sheets.
 
-Although 4 of the 5 sentences our summarizer came up with were different, they still centered around the article's main topic.\\
+In an article for Britain's Catholic Herald Magazine to be published on Friday, Australian Cardinal George Pell wrote that the discovery meant overall Vatican finances were in better shape than previously believed.
 
-\subsection*{article 2}
-summarizer 2: 2 out of 4 sentences were similar\\summarizer 3: 2 out of 5 sentences were similar\\summarizer 4: 1 out of 5 sentences were similar\\
-\\
-Again, the three sentences that weren't similar still provide important knowledge to the summary.
+``In fact, we have discovered that the situation is much healthier than it seemed, because some hundreds of millions of euros were tucked away in particular sectional accounts and did not appear on the balance sheet,'' he wrote.
+\end{quote}
 
-\subsection*{article 3}
-summarizer 2: 0 out of 4 sentences were similar\\summarizer 3: 0 out of 5 sentences were similar\\summarizer 4: 2 out of 5 sentences were similar\\
-\\
-In this article, none of the summarizers had very many similar sentences to eachother, but all summarized it well.
+\subsubsection*{Summarizer 1}
+\begin{itemize}
+\item The Vatican's economy minister has said hundreds of millions of euros were found ``tucked away'' in accounts of various Holy See departments without having appeared in the city-state's balance sheets.
+\item In an article for Britain's Catholic Herald Magazine to be published on Friday, Australian Cardinal George Pell wrote that the discovery meant overall Vatican finances were in better shape than previously believed.
+\item ``It is important to point out that the Vatican is not broke ... the Holy See is paying its way, while possessing substantial assets and investments,'' Pell said, according to an advance text made available on Thursday.
+\item ``Very few were tempted to tell the outside world what was happening, except when they needed extra help,'' he said, singling out the once-powerful Secretariat of State as one department that had especially jealously guarded its independence.
+\item In his article, Pell said the reforms were ``well under way and already past the point where the Vatican could return to the 'bad old days'.''
+\end{itemize}
+\subsubsection*{Summarizer 2}
+\begin{itemize}
+\item The Vatican's economy minister has said hundreds of millions of euros were found ``tucked away'' in accounts of various Holy See departments without having appeared in the city-state's balance sheets.
+\item Pell's office sent a letter to all Vatican departments last month about changes in economic ethics and accountability.
+\item Each department will have to enact ``sound and efficient financial management policies'' and prepare financial information and reports that meet international accounting standards.
+\end{itemize}
+\subsubsection*{Summarizer 3}
+\begin{itemize}
+\item The Vaticans economy minister has said hundreds of millions of euros were found tucked away in accounts of various Holy See departments without having appeared in the city-states balance sheets.
+\item Pell did not suggest any wrongdoing but said Vatican departments had long had an almost free hand with their finances and followed long-established patterns in managing their affairs.
+\item Pells office sent a letter to all Vatican departments last month about changes in economic ethics and accountability.
+\item As of Jan. 1, each department will have to enact sound and efficient financial management policies and prepare financial information and reports that meet international accounting standards.
+\end{itemize}
+\subsubsection*{Summarizer 4}
+\begin{itemize}
+\item ``The Holy See is paying its way, while possessing substantial assets and investments,'' Pell said, according to an advance text made available on Thursday.
+\item Pell did not suggest any wrongdoing but said Vatican departments had long had "an almost free hand" with their finances and followed ``long-established patterns'' in managing their affairs.
+\item "Very few were tempted to tell the outside world what was happening, except when they needed extra help," he said, singling out the once-powerful Secretariat of State as one department that had especially jealously guarded its independence.
+\item "It was impossible for anyone to know accurately what was going on overall," said Pell, head of the new Secretariat for the Economy that is independent of the now downgraded Secretariat of State.
+\item Pell is an outsider from the English-speaking world transferred by Pope Francis from Sydney to Rome to oversee the Vatican's often muddled finances after decades of control by Italians.
+\end{itemize}
+\subsubsection*{Overall Results}
+TextRank was able to match one sentence with summarizers 2 and 3 but none from summarizer 4.  However, even though TextRank only matched one sentence, the summary generated still has the important main points of the article.  In fact TextRank provided a bit more context than the other summarizers in including the second sentence identifying George Pell, author of a relavent article for a Catholic magazine.  The other summarizers mention Pell but miss the earlier references that introduce this source in the article.  
 
-\subsection*{article 4}
-summarizer 2: 3 out of 5 sentences were similar\\summarizer 3: 3 out of 5 sentences were similar\\summarizer 4: 2 out of 5 sentences were similar\\
-\\
-The two sentences not similar were still good pieces of information.\\
+\subsection*{Article 2}
+\begin{quote}
+Cruise ships released over one billion gallons of sewage into the ocean in 2014, according to a new report from Friends of the Earth.
 
-\subsection*{article 5}
-summarizer 2: 2 out of 5 sentences were similar\\summarizer 3: 3 out of 5 sentences were similar\\summarizer 4: 0 out of 5 sentences were similar\\
-\\
-For whatever reason, in this article The last online summarizer did a poor job of summarizing, so it's probably good it didn't share any similar sentences with ours.\\
+The analysis, which worked off of federal data, did show that some of the 16 cruise lines assessed are slowly becoming more environmentally friendly. But according to the press release from environmental group Friends of the Earth (FOE), over 40 percent of the 167 ships in operation still operate using waste treatment technology that's more than 35 years old. "Such antiquated treatment systems leave harmful levels of fecal matter, bacteria, heavy metals and other contaminants in the water," FOE noted.
 
-\subsection*{article 6}
-summarizer 2: 3 out of 4 sentences were similar\\summarizer 3: 3 out of 4 sentences were similar\\summarizer 4: 4 out of 5 sentences were similar\\
-\\
-In this article only 1 sentences was not also summarized by the other ones.
+Federal law requires that cruise ships only dump treated wastewater if they are within three nautical miles of shore. But beyond that point, it's essentially a free-for-all.
+\end{quote}
+
+\subsubsection*{Summarizer 1}
+\begin{itemize}
+\item But according to the press release from environmental group Friends of the Earth (FOE), over 40 percent of the 167 ships in operation still operate using waste treatment technology that's more than 35 years old.
+\item FOE also cites data from the Environmental Protection Agency (EPA) which shows an average cruise ship with 3,000 passengers and crew produces about 21,000 gallons of sewage a day  enough to fill 10 backyard swimming pools in a week.
+\item This is an industry worth billions of dollars that could install the most advanced sewage treatment and air pollution reduction technology available, said Marcie Keever, the oceans and vessels program director at FOE. We're encouraged that some cruise lines are taking incremental steps to improve their performance, but the entire industry must stop hiding behind weak regulations and take action to make sure the oceans their ships travel remain as clear as the photos in cruise brochures.
+\item Up through 2013, the report card had graded the cruise lines on three metrics: the quality of their sewage treatment technology, how much they reduce their air pollution through the use of cleaner fuels and plugging into onshore power, and how well they comply with water quality standards especially those established by the State of Alaska to protect its coasts.
+\item This also inspired FOE to add a fourth transparency metric to the report card, for which all 16 cruise lines received an F.
+\end{itemize}
+\subsubsection*{Summarizer 2}
+\begin{itemize}
+\item FOE also cites data from the Environmental Protection Agency (EPA) which shows an average cruise ship with 3,000 passengers and crew produces about 21,000 gallons of sewage a day enough to fill 10 backyard swimming pools in a week.
+\item Up through 2013, the report card had graded the cruise lines on three metrics: the quality of their sewage treatment technology, how much they reduce their air pollution through the use of cleaner fuels and plugging into onshore power, and how well they comply with water quality standards especially those established by the State of Alaska to protect its coasts.
+\item But for the 2014 report, all 16 cruise lines apparently refused to respond to FOE's request for information on their pollution reduction efforts forcing the group to rely on federal data.
+\item Outside of the transparency issue, Disney Cruise Lines is apparently the most environmentally friendly, scoring an A for sewage treatment, a B- for air pollution reduction, and an A for water quality compliance.
+\end{itemize}
+\subsubsection*{Summarizer 3}
+\begin{itemize}
+\item FOE also cites data from the Environmental Protection Agency which shows an average cruise ship with 3,000 passengers and crew produces about 21,000 gallons of sewage a day enough to fill 10 backyard swimming pools in a week.
+\item Were encouraged that some cruise lines are taking incremental steps to improve their performance, but the entire industry must stop hiding behind weak regulations and take action to make sure the oceans their ships travel remain as clear as the photos in cruise brochures.
+\item The centerpiece of FOEs analysis was their Cruise Ship Report Card, which has come out every year since 2009.
+\item Up through 2013, the report card had graded the cruise lines on three metrics: the quality of their sewage treatment technology, how much they reduce their air pollution through the use of cleaner fuels and plugging into onshore power, and how well they comply with water quality standards especially those established by the State of Alaska to protect its coasts.
+\item Outside of the transparency issue, Disney Cruise Lines is apparently the most environmentally friendly, scoring an A for sewage treatment, a B- for air pollution reduction, and an A for water quality compliance.
+\end{itemize}
+\subsubsection*{Summarizer 4}
+\begin{itemize}
+\item Cruise ships released over one billion gallons of sewage into the ocean in 2014, according to a new report from Friends of the Earth.
+\item The analysis, which worked off of federal data, did show that some of the 16 cruise lines assessed are slowly becoming more environmentally friendly.
+\item ``We're encouraged that some cruise lines are taking incremental steps to improve their performance, but the entire industry must stop hiding behind weak regulations and take action to make sure the oceans their ships travel remain as clear as the photos in cruise brochures.''
+\item The centerpiece of FOE's analysis was their Cruise Ship Report Card, which has come out every year since 2009.
+\item Up through 2013, the report card had graded the cruise lines on three metrics: the quality of their sewage treatment technology, how much they reduce their air pollution through the use of cleaner fuels and plugging into onshore power, and how well they comply with water quality standards - especially those established by the State of Alaska to protect its coasts.
+\end{itemize}
+\subsubsection*{Overall Results}
+TextRank identified two of the same sentences as summarizer 2 and 3 and one sentence from summarizer 4.  Although the summarizer includes some of the main points of the article including mention of the EPA reports, it misses the overall summary sentence.  Summarizer 4's first sentence is a good overview of the article that the other summarizers miss.  However, TextRank includes context about the ``Friends of Earth (FOE)''.  The other summarizers mention FOE in their summary sentences but without earlier context a reader would not understand the meaning of this term.
+
+\subsection*{Article 3}
+\begin{quote}
+Jihadis, who travelled to Iraq and Syria to join the Islamic State (IS) are begging to be allowed to return home, complaining they were forced to do menial tasks, media reported Tuesday.
+
+Foreign recruits have been writing to their parents with feeble excuses that range from having to clean toilets and to their iPod was no longer working or that it was getting too cold, the media reported.
+
+A series of weepy messages leaked to the French daily Le Figaro revealed a number of young French Muslim converts are having second thoughts about signing up to IS.
+\end{quote}
+
+\subsubsection*{Summarizer 1}
+\begin{itemize}
+\item The report also mentioned the Indian national, Majeed, who went to syria to fight for the militant group and was later arrested by the National Investigation Agency (NIA) for terror-related offences when he arrived back home.
+\item Majeed told NIA officers he was sidelined by the jihadis for whom he fetched water and performed other lowly tasks such as cleaning toilets, instead of taking part in the deadly offensive like he wanted.
+\item It came days after a court heard how a British man was jailed for conspiring to attend a terror training camp in Syria after he returned home after whining to his girlfriend about his treatment abroad.
+\item Photos from the brother's phones showed the strict daily schedule at the camp included two sessions of military training, two sessions of ``Islamic lessons'' and ``lights out'' at 10 p.m., the report said.
+\item Radicalised foreigners have been drawn to IS, which has conducted a series of mass executions and other atrocities since launching its offensive in Iraq and Syria in June, the report said.
+\end{itemize}
+\subsubsection*{Summarizer 2}
+\begin{itemize}
+\item Jihadis, who travelled to Iraq and Syria to join the Islamic State (IS) are begging to be allowed to return home, complaining they were forced to do menial tasks, media reported Tuesday.
+\item Foreign recruits have been writing to their parents with feeble excuses that range from having to clean toilets and to their iPod was no longer working or that it was getting too cold, the media reported.
+\item A series of weepy messages leaked to the French daily Le Figaro revealed a number of young French Muslim converts are having second thoughts about signing up to IS.
+\item ``I'm fed up to the back teeth. My iPod no longer works out here. I have got to come home,'' one of the foreign IS recruits was quoted as saying.
+\end{itemize}
+\subsubsection*{Summarizer 3}
+\begin{itemize}
+\item Jihadis, who travelled to Iraq and Syria to join the Islamic State are begging to be allowed to return home, complaining they were forced to do menial tasks, media reported Tuesday.
+\item Dozens of other recruits, who are reportedly now working with French lawyers, have collected texts and messages that suggest the jihadis felt cheated into joining IS.
+\item One lawyer said that the longer they remain in Iraq and Syria, the more chance they have of becoming time bombs when they return.
+\item The report also mentioned the Indian national, Majeed, who went to syria to fight for the militant group and was later arrested by the National Investigation Agency for terror-related offences when he arrived back home.
+\item The brothers brought back bullets and took the pictures on their mobile phones to remember their time in the jihadi camp.
+\end{itemize}
+\subsubsection*{Summarizer 4}
+\begin{itemize}
+\item One lawyer said that the longer they remain in Iraq and Syria, the more chance they have of becoming ``time bombs'' when they return.
+\item The report also mentioned the Indian national, Majeed, who went to syria to fight for the militant group and was later arrested by the National Investigation Agency (NIA) for terror-related offences when he arrived back home.
+\item Majeed told NIA officers he was sidelined by the jihadis for whom he fetched water and performed other lowly tasks such as cleaning toilets, instead of taking part in the deadly offensive like he wanted.
+\item Al Qaeda announced in September a new chapter of its extremist movement charged with waging jihad in South Asia.
+\item Tanvir Sheikh, father of one of Majeed's friends who was still missing in Iraq, said he felt betrayed by his son.
+\end{itemize}
+\subsubsection*{Overall Results}
+TextRank identified zero of the same sentences as summarizers 2 and 3 and identified two sentences in common with summarizer 4.  TextRank missed the first summary sentence from summarizer 2 and 3 but includes some of the examples of why foreigners are regretting joining ISIS.  Overall this article was relatively difficult to summarize and both TextRank and summarizer 4 did fairly poor on this article.
+
+\subsection*{Article 4}
+\begin{quote}
+Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
+
+At the Vodafone-hosted Digitising Europe conference in Berlin, she called for a splitting of services, "one for free internet, and the other for special services", adding that it was up to Brussels to negotiate how it would work.
+
+``An innovation-friendly internet means that there is a guaranteed reliability for special services," she said. "These can only develop when predictable quality standards are available''.
+\end{quote}
+
+\subsubsection*{Summarizer 1}
+\begin{itemize}
+\item Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
+\item Social Democratic Party (SPD) MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
+\item ``If Merkel goes into negotiations with the position she's outlined today, it will be very difficult for the European Council to find a common position,'' she said.
+\item The Council, composed of the heads of state and government of all the EU member countries, must find a common negotiating position to deal with the European Parliament, which voted against a European Commission plan for regulations that would allow a two-tier internet in April.
+\item ``This is not the net neutrality we want, but a move towards the creation of a two-tier network where content becomes preferred based on who pays for it to make it so'', said Markus Beckedahl, Berlin-based founder of netzpolitik.
+\end{itemize}
+\subsubsection*{Summarizer 2}
+\begin{itemize}
+\item Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
+\item At the Vodafone-hosted Digitising Europe conference in Berlin, she called for a splitting of services, ``one for free internet, and the other for special services'', adding that it was up to Brussels to negotiate how it would work.
+\item Merkel added that these special services would run over existing internet infrastructure.
+\item Social Democratic Party (SPD) MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
+\item ``If Merkel goes into negotiations with the position she's outlined today, it will be very difficult for the European Council to find a common position,'' she said.
+\end{itemize}
+\subsubsection*{Summarizer 3}
+\begin{itemize}
+\item At the Vodafone-hosted Digitising Europe conference in Berlin, she called for a splitting of services, one for free internet, and the other for special services , adding that it was up to Brussels to negotiate how it would work.
+\item Social Democratic Party MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
+\item If Merkel goes into negotiations with the position shes outlined today, it will be very difficult for the European Council to find a common position, she said.
+\item The Council, composed of the heads of state and government of all the EU member countries, must find a common negotiating position to deal with the European Parliament, which voted against a European Commission plan for regulations that would allow a two-tier internet in April.
+\item If you poke holes into net neutrality the way Chancellor Merkel suggests, then its no longer democratic, he said.
+\end{itemize}
+\subsubsection*{Summarizer 4}
+\begin{itemize}
+\item Merkel said that some key services for the digital economy would require reliable transmission quality and should therefore be treated differently than other data.
+\item At the Vodafone-hosted Digitising Europe conference in Berlin, she called for a splitting of services, ``one for free internet, and the other for special services'', adding that it was up to Brussels to negotiate how it would work.
+\item ``An innovation-friendly internet means that there is a guaranteed reliability for special services," she said. "These can only develop when predictable quality standards are available''.
+\item Merkel added that these special services would run over existing internet infrastructure.
+\item Social Democratic Party (SPD) MEP Petra Kammerevert told The Local that this would make it more difficult to find a common European position on net neutrality.
+\end{itemize}
+\subsubsection*{Overall Results}
+TextRank was able to match 3 of the sentences from summarizer 2 and 3 and matches 2 of the sentences from summarizer 4.
+
+\subsection*{Article 5}
+\begin{quote}
+President Vladimir Putin has warned Russians of hard times ahead and urged self-reliance, in his annual state-of-the nation address to parliament.
+
+Russia has been hit hard by falling oil prices and by Western sanctions imposed in response to its interventions in the crisis in neighbouring Ukraine.
+
+The rouble, once a symbol of stability under Mr Putin, suffered its biggest one-day decline since 1998 on Monday.
+\end{quote}
+
+\subsubsection*{Summarizer 1}
+\begin{itemize}
+\item Mr Putin said: ``There is no doubt they would have loved to see the Yugoslavia scenario of collapse and dismemberment for us - with all the tragic consequences it would have for the peoples of Russia''.
+\item So it's telling that Mr Putin chose to stress his unwavering hard line on the crisis in Ukraine: what happened in Kiev was an ``illegal coup'' and Crimea, which Russia annexed, is like ``holy land'' for Russia and will always be treated that way.
+\item He insisted the "tragedy" in Ukraine's south-east had proved that Russian policy had been right but said Russia would respect its neighbour as a brotherly country.
+\item Other economic measures Mr Putin outlined included: A four-year freeze on tax rates to help businesses    A drive by the central bank and government to combat ``speculators''    Lending by the National Welfare Fund on favourable terms to major banks.
+\item Russians are believed to have taken more than 100bn out of the country this year and Mr Putin promised an amnesty for anyone choosing to bring their money back.
+\end{itemize}
+\subsubsection*{Summarizer 2}
+\begin{itemize}
+\item Russia has been hit hard by falling oil prices and by Western sanctions imposed in response to its interventions in the crisis in neighbouring Ukraine.
+\item Speaking to both chambers in the Kremlin, Mr Putin also accused Western governments of seeking to raise a new ``iron curtain'' around Russia.
+\item So it's telling that Mr Putin chose to stress his unwavering hard line on the crisis in Ukraine: what happened in Kiev was an ``illegal coup'' and Crimea, which Russia annexed, is like ``holy land'' for Russia and will always be treated that way.
+\item Vladimir Putin again accused the West of meddling in Russia's internal affairs and using sanctions to ``contain'' the country as it grew stronger and more independent.
+\item Russians are believed to have taken more than 100bn out of the country this year and Mr Putin promised an amnesty for anyone choosing to bring their money back.
+\end{itemize}
+\subsubsection*{Summarizer 3}
+\begin{itemize}
+\item He insisted the tragedy in Ukraines south-east had proved that Russian policy had been right but said Russia would respect its neighbour as a brotherly country.
+\item So its telling that Mr Putin chose to stress his unwavering hard line on the crisis in Ukraine: what happened in Kiev was an illegal coup and Crimea, which Russia annexed, is like holy land for Russia and will always be treated that way.
+\item Vladimir Putin again accused the West of meddling in Russias internal affairs and using sanctions to contain the country as it grew stronger and more independent.
+\item Russians are believed to have taken more than 100bn out of the country this year and Mr Putin promised an amnesty for anyone choosing to bring their money back.
+\item Stressing that Russia remained open for the world , Mr Putin suggested Western sanctions should be seen as a stimulus.
+\end{itemize}
+\subsubsection*{Summarizer 4}
+\begin{itemize}
+\item Russia has been hit hard by falling oil prices and by Western sanctions imposed in response to its interventions in the crisis in neighbouring Ukraine.
+\item The rouble, once a symbol of stability under Mr Putin, suffered its biggest one-day decline since 1998 on Monday.
+\item The government has warned that Russia will fall into recession next year.
+\item Speaking to both chambers in the Kremlin, Mr Putin also accused Western governments of seeking to raise a new ``iron curtain'' around Russia.
+\item He expressed no regrets for annexing Ukraine's Crimea peninsula, saying the territory had a ``sacred meaning'' for Russia.
+\end{itemize}
+\subsubsection*{Overall Results}
+TextRank matches two sentences with summarizer 2, three sentences with summarizer 3 and no sentences with summarizer 4.
+
+\subsection*{Article 6}
+\begin{quote}
+US-led air raids have struck Syrian rebels not linked to the Islamic State of Iraq and the Levant (ISIL), expanding the coalitions raids for the second time to other groups fighting in Syria.
+
+Activists in Syria told Al Jazeera the raids struck the Ahrar al-Sham rebel group in the northern province of Idlib, and the Syrian branch of al-Qaeda, the Nusra Front, in western Aleppo on Thursday.
+
+At least six coalition air raids struck Idlib overnight, with one targeting an Ahrar al-Sham position in the village of Babska.
+\end{quote}
+
+\subsubsection*{Summarizer 1}
+\begin{itemize}
+\item US-led air raids have struck Syrian rebels not linked to the Islamic State of Iraq and the Levant (ISIL), expanding the coalitions raids for the second time to other groups fighting in Syria.
+\item Activists in Syria told Al Jazeera the raids struck the Ahrar al-Sham rebel group in the northern province of Idlib, and the Syrian branch of al-Qaeda, the Nusra Front, in western Aleppo on Thursday.
+\item One of Syria's largest armed opposition groups, Ahrar al-Sham is a key member of the Islamic Front coalition, which seeks a state run on Islamic principles as its fights to topple Syrian President Bashar al-Assad.
+\item Air raids also targeted the Nusra Front in the Reef al-Muhandisin area of western Aleppo, reportedly killing several of the groups' fighters as well as six civilians.
+\item The US and Arab states have been carrying out air strikes against ISIL in Syria since September 23, in a bid to prevent the armed group from seizing more territory in the conflict-hit nation.
+\end{itemize}
+\subsubsection*{Summarizer 2}
+\begin{itemize}
+\item US-led air raids have struck Syrian rebels not linked to the Islamic State of Iraq and the Levant (ISIL), expanding the coalitions raids for the second time to other groups fighting in Syria.
+\item Activists in Syria told Al Jazeera the raids struck the Ahrar al-Sham rebel group in the northern province of Idlib, and the Syrian branch of al-Qaeda, the Nusra Front, in western Aleppo on Thursday.
+\item One of Syria's largest armed opposition groups, Ahrar al-Sham is a key member of the Islamic Front coalition, which seeks a state run on Islamic principles as its fights to topple Syrian President Bashar al-Assad.
+\item There have been no reported attacks on groups outside ISIL since, but the latest air raids come after the group made gains against Western-backed rebel fighters in the Idlib region.
+\end{itemize}
+\subsubsection*{Summarizer 3}
+\begin{itemize}
+\item US-led air raids have struck Syrian rebels not linked to the Islamic State of Iraq and the Levant, expanding the coalitions raids for the second time to other groups fighting in Syria.
+\item Activists in Syria told Al Jazeera the raids struck the Ahrar al-Sham rebel group in the northern province of Idlib, and the Syrian branch of al-Qaeda, the Nusra Front, in western Aleppo on Thursday.
+\item Air raids also targeted the Nusra Front in the Reef al-Muhandisin area of western Aleppo, reportedly killing several of the groups fighters as well as six civilians.
+\item There have been no reported attacks on groups outside ISIL since, but the latest air raids come after the group made gains against Western-backed rebel fighters in the Idlib region.
+\end{itemize}
+\subsubsection*{Summarizer 4}
+\begin{itemize}
+\item US-led air raids have struck Syrian rebels not linked to the Islamic State of Iraq and the Levant (ISIL), expanding the coalitions raids for the second time to other groups fighting in Syria.
+\item Activists in Syria told Al Jazeera the raids struck the Ahrar al-Sham rebel group in the northern province of Idlib, and the Syrian branch of al-Qaeda, the Nusra Front, in western Aleppo on Thursday.
+\item At least six coalition air raids struck Idlib overnight, with one targeting an Ahrar al-Sham position in the village of Babska.
+\item One of Syria's largest armed opposition groups, Ahrar al-Sham is a key member of the Islamic Front coalition, which seeks a state run on Islamic principles as its fights to topple Syrian President Bashar al-Assad.
+\item Air raids also targeted the Nusra Front in the Reef al-Muhandisin area of western Aleppo, reportedly killing several of the groups' fighters as well as six civilians.
+\end{itemize}
+\subsubsection*{Overall Results}
+TextRank matches three sentences with summarizer 2 and 3 and four sentences with summarizer 4.  All the summarizers did a fair job of summarizing this particular article.
 
 \section*{Conclusion}
-Overall TextRank's results were comparable to the other summarizers.  TextRank was able to return sensible summaries for many of the news articles.  For some of the more difficult results TextRank had comparable results to the other online summarizers.  These are promising results as our implementation of TextRank uses very few heuristics.  The only heuristic we employed was the ordering of the returned sentences; we did not employ heuristics for sentence position or paragraph position as we suspect the online summarizers used.  Possible future work would involve comparing the results of difference weighting functions and sentence position heuristics.  Additionally news article titles are important overviews of the article and a possible extension would be to give some weight or prior to text contained in an article's title.
+Overall TextRank's results were comparable to the other summarizers most of the time.  TextRank was able to include some context that the other summarizers missed.  For some of the more difficult results TextRank had comparable results to the other online summarizers.  In some cases where TextRank missed important information in the summary it was still able to match a large number of sentences that the other summarizers identified.  These are promising results as our implementation of TextRank uses very few heuristics.  The only heuristic we employed was the ordering of the returned sentences; we did not employ heuristics for sentence position or paragraph position as we suspect the online summarizers used.  Possible future work would involve comparing the results of difference weighting functions and sentence position heuristics.  Additionally news article titles are important overviews of the article and a possible extension would be to give some weight or prior to text contained in an article's title.
 
 \section*{Sources}
 %citation
