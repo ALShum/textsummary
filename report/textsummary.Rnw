@@ -57,38 +57,42 @@ For evaluation purposes we randomly choose the following six news articles from 
 
 We use our implementation of TextRank against other online text summarizers for the articles mentioned above.  We check the similarity in terms of the number of matched sentences between the above summarizers and TextRank.  Complete results can be found at our repository: \url{http://www.github.com/ALShum/textsummary/blob/master/Results.txt}.
 \\
-The following is a summary of the results. 
+The following is a summary of the results.  Summarizer 1 refers to TextRank and summarizers 2, 3, 4 refer respectively to the online summarizers listed above.  Articles 1 through 6 refer to the articles listed above respectively.  For TextRank we always return the top 5 sentences that summarize the entire news article.  The online summarizers return a varying number of sentences depending on the news article.
 
-Note: it's necessary to add how many sentences could have been smilar since the online summarizers sometimes use less than five sentences.\\
-\\
-Article 1:\\summarizer 2: 1 out of 3 sentences were similar\\summarizer 3: 1 out of 4 sentences were similar\\summarizer 4: 0 out of 5 sentences were similar\\
-\\
+\subsection*{article 1}
+summarizer 2: 1 out of 3 sentences were similar\\summarizer 3: 1 out of 4 sentences were similar\\summarizer 4: 0 out of 5 sentences were similar.
+
 Although 4 of the 5 sentences our summarizer came up with were different, they still centered around the article's main topic.\\
+
+\subsection*{article 2}
+summarizer 2: 2 out of 4 sentences were similar\\summarizer 3: 2 out of 5 sentences were similar\\summarizer 4: 1 out of 5 sentences were similar\\
 \\
-Article 2:\\summarizer 2: 2 out of 4 sentences were similar\\summarizer 3: 2 out of 5 sentences were similar\\summarizer 4: 1 out of 5 sentences were similar\\
-\\
-Again, the three sentences that weren't similar still provide important knowledge to the summary.\\
-\\
-Article 3:\\summarizer 2: 0 out of 4 sentences were similar\\summarizer 3: 0 out of 5 sentences were similar\\summarizer 4: 2 out of 5 sentences were similar\\
+Again, the three sentences that weren't similar still provide important knowledge to the summary.
+
+\subsection*{article 3}
+summarizer 2: 0 out of 4 sentences were similar\\summarizer 3: 0 out of 5 sentences were similar\\summarizer 4: 2 out of 5 sentences were similar\\
 \\
 In this article, none of the summarizers had very many similar sentences to eachother, but all summarized it well.
-\\
-Article 4:\\summarizer 2: 3 out of 5 sentences were similar\\summarizer 3: 3 out of 5 sentences were similar\\summarizer 4: 2 out of 5 sentences were similar\\
+
+\subsection*{article 4}
+summarizer 2: 3 out of 5 sentences were similar\\summarizer 3: 3 out of 5 sentences were similar\\summarizer 4: 2 out of 5 sentences were similar\\
 \\
 The two sentences not similar were still good pieces of information.\\
-\\
-Article 5:\\summarizer 2: 2 out of 5 sentences were similar\\summarizer 3: 3 out of 5 sentences were similar\\summarizer 4: 0 out of 5 sentences were similar\\
+
+\subsection*{article 5}
+summarizer 2: 2 out of 5 sentences were similar\\summarizer 3: 3 out of 5 sentences were similar\\summarizer 4: 0 out of 5 sentences were similar\\
 \\
 For whatever reason, in this article The last online summarizer did a poor job of summarizing, so it's probably good it didn't share any similar sentences with ours.\\
-\\
-Article 6:\\summarizer 2: 3 out of 4 sentences were similar\\summarizer 3: 3 out of 4 sentences were similar\\summarizer 4: 4 out of 5 sentences were similar\\
+
+\subsection*{article 6}
+summarizer 2: 3 out of 4 sentences were similar\\summarizer 3: 3 out of 4 sentences were similar\\summarizer 4: 4 out of 5 sentences were similar\\
 \\
 In this article only 1 sentences was not also summarized by the other ones.
 
 \section*{Conclusion}
+Overall TextRank's results were comparable to the other summarizers.  TextRank was able to return sensible summaries for many of the news articles.  For some of the more difficult results TextRank had comparable results to the other online summarizers.  These are promising results as our implementation of TextRank uses very few heuristics.  The only heuristic we employed was the ordering of the returned sentences; we did not employ heuristics for sentence position or paragraph position as we suspect the online summarizers used.  Possible future work would involve comparing the results of difference weighting functions and sentence position heuristics.  Additionally news article titles are important overviews of the article and a possible extension would be to give some weight or prior to text contained in an article's title.
 
 \section*{Sources}
-
 %citation
 %overview
 %1. http://pages.cs.wisc.edu/~goldberg/publications/summarization.pdf
