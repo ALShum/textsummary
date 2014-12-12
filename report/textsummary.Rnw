@@ -321,8 +321,16 @@ TextRank matches three sentences with summarizer 2 and 4 and four sentences with
 Overall TextRank's results were comparable to the other summarizers most of the time.  TextRank was able to include some context that the other summarizers missed.  For some of the more difficult results TextRank had comparable results to the other online summarizers.  In some cases where TextRank missed important information in the summary it was still able to match a large number of sentences that the other summarizers identified.  These are promising results as our implementation of TextRank uses very few heuristics.  The only heuristic we employed was the ordering of the returned sentences; we did not employ heuristics for sentence position or paragraph position as we suspect the online summarizers used.  Possible future work would involve comparing the results of difference weighting functions and sentence position heuristics.  Additionally news article titles are important overviews of the article and a possible extension would be to give some weight or prior to text contained in an article's title.
 
 \section*{Sources}
-%citation
-%overview
+\begin{enumerate}
+\item Text Summarization: \url{http://pages.cs.wisc.edu/~goldberg/publications/summarization.pdf}
+\item TextRank: \url{http://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf}
+\item Supervised text summarization: \url{http://www.extractor.com/IR2000.pdf}
+\item Latent semantic analysis for text summarization: \url{http://www.kiv.zcu.cz/~jstein/publikace/isim2004.pdf}
+\item LexRank: \url{http://www.cs.cmu.edu/afs/cs/project/jair/pub/volume22/erkan04a-html/erkan04a.html}
+\item PageRank: \url{http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf}
+\item Lucene Java Library: \url{http://lucene.apache.org/}
+\item OpenNLP Java Library: \url{https://opennlp.apache.org/}
+\end{enumerate}
 %1. http://pages.cs.wisc.edu/~goldberg/publications/summarization.pdf
 %textrank
 %2. http://web.eecs.umich.edu/~mihalcea/papers/mihalcea.emnlp04.pdf
@@ -336,8 +344,4 @@ Overall TextRank's results were comparable to the other summarizers most of the 
 %6. http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf
 %7. Lucene
 %8. OpenNLP
-%page rank links:
-%9 http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf
-%10 http://www.cs.princeton.edu/~chazelle/courses/BIB/pagerank.htm
-
 \end{document}
